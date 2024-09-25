@@ -982,7 +982,7 @@ ul {
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  background: url(../images/slider2.jpg);
+  /* background: url(../images/slider2.jpg); */
   position: relative;
   min-height: 800px;
 }
@@ -992,7 +992,7 @@ ul {
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  background: url(../images/slider3.jpg);
+  /* background: url(../images/slider3.jpg); */
   position: relative;
   min-height: 800px;
 }
