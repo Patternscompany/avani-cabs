@@ -493,7 +493,7 @@ ul {
 .dropdown-wrapper:hover > .menu-button {
   color: red;
 }
-.dropdown-wrapper > .menu-button:after {
+li.active .dropdown-wrapper > .menu-button:after {
   content: "";
   border: 1px solid red;
   width: 60%;
@@ -510,7 +510,7 @@ ul {
   opacity: 1;
 }
 
-.dropdown-wrapper:hover > .menu-button:after {
+li.active .dropdown-wrapper:hover > .menu-button:after {
   content: "";
   border: 1px solid red;
   width: 50px;
@@ -719,7 +719,7 @@ ul {
 }
 .menu_fixed {
   position: fixed;
-  background: #ffffff;
+  background: #000000;
   -webkit-box-shadow: 0px 1px 20px 0px rgba(0, 0, 0, 0.1);
   -moz-box-shadow: 0px 1px 20px 0px rgba(0, 0, 0, 0.1);
   -o-box-shadow: 0px 1px 20px 0px rgba(0, 0, 0, 0.1);
@@ -6955,3 +6955,4 @@ h3 i.logo-icon::before {
 li.active a {
   color: red;
 }
+
