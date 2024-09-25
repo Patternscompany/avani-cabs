@@ -458,7 +458,7 @@ ul {
 }
 .hs_main_menu a {
   text-align: center;
-  padding: 35px 20px 36px;
+  padding: 35px 20px 10px;
   text-transform: uppercase;
   display: inline-block;
   border: 0;
@@ -496,7 +496,7 @@ ul {
 .dropdown-wrapper > .menu-button:after {
   content: "";
   border: 1px solid red;
-  width: 0;
+  width: 60%;
   left: 0;
   right: 0;
   bottom: 0;
@@ -507,7 +507,7 @@ ul {
   -ms-transition: all 0.5s;
   -moz-transition: all 0.5s;
   transition: all 0.5s;
-  opacity: 0;
+  opacity: 1;
 }
 
 .dropdown-wrapper:hover > .menu-button:after {
@@ -4722,7 +4722,7 @@ input[type="number"] {
   display: inline-block;
   margin-bottom: 5px;
   padding-bottom: 8px;
-  color: ##111111;
+  color: #111111;
 }
 .progressOne .progress {
   height: 5px;
