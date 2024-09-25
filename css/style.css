@@ -439,8 +439,8 @@ ul {
 .hs_navigation_header_wrapper {
   float: left;
   width: 100%;
-  position: relative;
-  background: #ffffff;
+  position: fixed;
+  /* background: #ffffff; */
   z-index: 1;
 }
 .hs_main_menu li {
@@ -462,7 +462,7 @@ ul {
   text-transform: uppercase;
   display: inline-block;
   border: 0;
-  color: #111111;
+  color: #ffffff;
   -webkit-transition: all 0.5s;
   -o-transition: all 0.5s;
   -ms-transition: all 0.5s;
@@ -972,7 +972,7 @@ ul {
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  background: url(../images/slider1.jpg) 50% 0 repeat-y;
+  /* background: url(../images/slider1.jpg) 50% 0 repeat-y; */
   position: relative;
   min-height: 800px;
 }
@@ -997,13 +997,13 @@ ul {
   min-height: 800px;
 }
 .slider-area .carousel-inner .carousel-item .carousel-captions:after {
-  content: "";
+  /* content: "";
   position: absolute;
   left: 0;
   right: 0;
   top: 0;
   bottom: 0;
-  background: rgba(0, 0, 0, 0.7);
+  background: rgba(0, 0, 0, 0.7); */
 }
 .slider-area .carousel-inner .carousel-item .carousel-captions .content {
   display: block;
