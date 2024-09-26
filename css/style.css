@@ -4340,6 +4340,7 @@ input[type="number"] {
 }
 .x_about_seg_img_wrapper img {
   width: 100%;
+  border-radius: 10px;
 }
 .x_about_seg_img_cont_wrapper h3 {
   font-size: 30px;
