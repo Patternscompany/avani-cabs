@@ -288,7 +288,8 @@ Main Components
   -moz-transition: -moz-transform 0.3s;
   transition: transform 0.3s;
   padding-top: 50px;
-  background-color: red ;
+  background-color: 
+  #e90a0b ;
 }
 .cd-dropdown-content a, .cd-dropdown-content ul a {
   display: block;
