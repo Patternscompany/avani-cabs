@@ -5708,7 +5708,7 @@ input[type="number"] {
   margin-top: 40px;
   float: left;
 }
-.contect_btn li a {
+.contect_btn li button {
   float: left;
   width: 150px;
   height: 50px;
@@ -5722,16 +5722,17 @@ input[type="number"] {
   -moz-border-radius: 10px;
   border-radius: 10px;
 }
-.contect_btn li a i {
+.contect_btn li button i {
   font-size: 12px;
   position: relative;
   left: 5px;
   top: -1px;
 }
-.contect_btn li a:hover {
+.contect_btn li button:hover {
   background: transparent;
   border: 1px solid #e90a0b;
   color: #e90a0b;
+  cursor: pointer;
 }
 .gc_blog_single_form_heading {
   float: left;
