@@ -295,61 +295,53 @@
             </div>
           </div>
         </div>
-        <div class="col-lg-12">
+        <div class="col-lg-12 pt-5">
           <div class="pricing-section">
-            <h1>Cab Pricing</h1>
+            
             <div class="pricing-cards">
               <!-- Card 1 -->
-              <div class="pricing-card">
+              <div class="pricing-card col-lg-4">
+                <h2>Ramoji film City(1 day)</h2>
+              
+                <ul>
+                  <li> <img src="images/Dzire.png" alt=""> Sedan <span>-</span>  <strong>₹3500</strong></li>
+                  <li><img src="images/Innova-crysta.png" alt=""> Crysta <span>-</span> <strong>₹5500</strong></li>
+                  <li><img src="images/Innova.png" alt=""> Innova <span>-</span> <strong>₹4500</strong></li>
+                  <li><img src="images/ertiga.png" alt=""> Ertiga<span>-</span> <strong>₹4200</strong></li>
+                </ul>
+                <a class="book-now-btn" target="_blank"
+                  href="https://api.whatsapp.com/send/?phone=8341822404&text=Hello%20Avani%20Cabs%20I'm%20looking%20for%20a%20cab%20">Book
+                  now</a>
+              </div>
+              <div class="pricing-card col-lg-4">
                 <h2>Airport Pickup</h2>
-                 <!-- <div class="price">₹1000</div> -->
+              
                 <ul>
-                  <li>Includes driver and fuel</li>
-                  <li><strong>Innova</strong> : ₹2300</li>
-                  <li><strong>Crysta</strong> : ₹2600</li>
-                  <li><strong>Sedan</strong> : ₹1300</li>
-                  <li><strong>Ertiga</strong> : ₹800</li>
-                  <!-- <li>AC Sedan</li>
-                  <li>Up to 4 passengers</li>
-                  <li>24/7 Availability</li> -->
+                  <li> <img src="images/Dzire.png" alt=""> Sedan <span>-</span>  <strong>₹1300</strong></li>
+                  <li><img src="images/Innova-crysta.png" alt=""> Crysta <span>-</span> <strong>₹2600</strong></li>
+                  <li><img src="images/Innova.png" alt=""> Innova <span>-</span> <strong>₹2300</strong></li>
+                  <li><img src="images/ertiga.png" alt=""> Ertiga<span>-</span> <strong>₹1800</strong></li>
                 </ul>
                 <a class="book-now-btn" target="_blank"
                   href="https://api.whatsapp.com/send/?phone=8341822404&text=Hello%20Avani%20Cabs%20I'm%20looking%20for%20a%20cab%20">Book
                   now</a>
               </div>
-
-              <!-- Card 2 -->
-              <div class="pricing-card">
-                <h2>Airport Drop</h2>
-                <!-- <div class="price">₹900</div> -->
+              <!-- <div class="pricing-card col-lg-4">
+                <h2>Srisailam Tour</h2>
+              
                 <ul>
-                  <li><strong>35KM - 40KM</strong> : ₹1350</li>
-                  <li><strong>30KM - 35KM</strong> : ₹1200</li>
-                  <!-- <li><strong>Sedan</strong> : 2300</li>
-                  <li><strong>Ertiga</strong> : 2300</li> -->
-                  <li>Includes driver and fuel</li>
-                  <!-- <li>AC Sedan</li> 
-                  <li>Up to 4 passengers</li>-->
-                  <li>24/7 Availability</li> 
+                  <li> <span>Car Name</span> <strong>1 day</strong> <strong>2 day</strong></li>
+                  <li>Dzire <span>-</span>  <strong>₹7000</strong> <strong>₹9000</strong></li>
+                  <li>Crysta <span>-</span> <strong>₹10,000</strong> <strong>₹14,000</strong></li>
+                  <li>Innova <span>-</span> <strong>₹9,000</strong> <strong>₹12,000</strong></li>
+                  <li>Ertiga<span>-</span> <strong>₹9,000</strong><strong>₹11,000</strong></li>
                 </ul>
                 <a class="book-now-btn" target="_blank"
                   href="https://api.whatsapp.com/send/?phone=8341822404&text=Hello%20Avani%20Cabs%20I'm%20looking%20for%20a%20cab%20">Book
                   now</a>
-              </div>
+              </div> -->
 
-              <!-- Card 3 -->
-              <div class="pricing-card">
-                <h2>City Tour</h2>
-                <div class="price">₹1500</div>
-                <ul>
-                  <li>Full day cab service</li>
-                  <li>AC Sedan</li>
-                  <li>Includes 200km travel</li>
-                  <li>Experienced drivers</li>
-                </ul>
-                <a class="book-now-btn" target="_blank"
-                href="https://api.whatsapp.com/send/?phone=8341822404&text=Hello%20Avani%20Cabs%20I'm%20looking%20for%20a%20cab%20">Book now</a>
-              </div>
+             
             </div>
           </div>
         </div>
@@ -363,8 +355,8 @@
       padding: 50px 0;
     }
 
-    .pricing-section h1 {
-      font-size: 36px;
+    .pricing-section h3 {
+      font-size: 20px;
       margin-bottom: 20px;
     }
 
@@ -376,6 +368,7 @@
     }
 
     .pricing-card {
+     
       background-color: white;
       padding: 20px;
       border-radius: 8px;
@@ -389,10 +382,8 @@
     }
 
     .pricing-card h2 {
-      font-size: 24px;
-      margin-bottom: 20px;
-      color: #000;
-      font-weight: 600;
+      font-size: 20px;
+      margin-bottom: 10px;
     }
 
     .pricing-card .price {
@@ -405,16 +396,27 @@
       list-style: none;
       padding: 0;
       margin: 0;
-      text-align: left;
+      text-align: center;
     }
 
     .pricing-card ul li {
-      padding: 5px 0;
+      padding: 15px 0;
+      font-weight:bolder;
+      text-transform: uppercase;
       border-bottom: 1px solid #ddd;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
     }
-
-    .pricing-card ul li strong{}
-
+    .pricing-card ul li strong{
+      color: red;
+    }
+.pricing-card ul li img{
+  width: 2.5rem;
+}
+.pricing-card ul li:hover img{
+  transform: scale(1.1);
+}
     .pricing-card ul li:last-child {
       border-bottom: none;
     }
@@ -512,7 +514,7 @@
       border: 0;
     }
   </style>
-  <div class="counto_main_wrapper">
+  <!-- <div class="counto_main_wrapper">
     <div class="counto_img_overlay"></div>
     <div class="container">
       <div class="row">
@@ -562,7 +564,7 @@
         </div>
       </div>
     </div>
-  </div>
+  </div> -->
   <!--  counter Wrapper End -->
   <!-- xs offer car tabs Start
 	<div class="x_ln_car_main_wrapper float_left padding_tb_100">
