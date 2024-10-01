@@ -960,6 +960,9 @@ li.active .dropdown-wrapper:hover > .menu-button:after {
   width: auto;
   height: 0 !important;
 }
+.logo{
+  width: 100px;
+}
 /*-- hs Navigation right End --*/
 /*-- hs Slider Start --*/
 .slider-area {
