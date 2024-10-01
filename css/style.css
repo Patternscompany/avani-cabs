@@ -580,7 +580,7 @@ li.active .dropdown-wrapper:hover > .menu-button:after {
   transition: transform 0.4s;
   transform: translateY(-300%);
   background: #ffffff;
-  color: blue;
+  color: red;
   float: left;
   width: 100%;
   text-transform: capitalize;
