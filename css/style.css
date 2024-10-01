@@ -960,7 +960,7 @@ li.active .dropdown-wrapper:hover > .menu-button:after {
   width: auto;
   height: 0 !important;
 }
-.logo{
+.logo {
   width: 100px;
 }
 /*-- hs Navigation right End --*/
@@ -3307,10 +3307,10 @@ html .ui-button.ui-state-disabled:active {
 .x_footer_bottom_main_wrapper {
   padding-bottom: 60px;
   background: linear-gradient(
-      rgba(0, 0, 0, 0.8), /* transparent black mask */
-      rgba(0, 0, 0, 0.8)
+      rgba(0, 0, 0, 0.8),
+      /* transparent black mask */ rgba(0, 0, 0, 0.8)
     ),
-    url('/images/footer-img.png'); /* replace with your image URL */
+    url("/images/footer-img.png"); /* replace with your image URL */
   background-size: cover;
   background-position: center;
 }
@@ -6968,39 +6968,38 @@ li.active a {
   color: #e90a0b;
 }
 
-.tour-btn{
+.tour-btn {
   background-color: green;
   padding: 10px !important;
-  color:#fff !important;
+  color: #fff !important;
   margin-top: 17px;
   border-radius: 10px;
 }
-.tour-btn-submit{
+.tour-btn-submit {
   background-color: red;
   padding: 10px !important;
-  color:#fff !important;
+  color: #fff !important;
   margin-top: 17px;
   border-radius: 10px;
   border: 0;
   max-width: 200px;
 }
-@media (max-width:992px){
-  .tour-btn{
+@media (max-width: 992px) {
+  .tour-btn {
     margin-top: 0;
   }
 }
 
-
-@media (max-width:768px){
-  .tour-btn{
+@media (max-width: 768px) {
+  .tour-btn {
     width: fit-content;
     padding-top: 0 !important;
     margin: 10px 0 0 10px;
   }
 }
 
-.book-cab-btn{
-  background-color: #0159B3;
+.book-cab-btn {
+  background-color: #0159b3;
   /* margin-top: 10px; */
   border-radius: 10px;
   padding: 15px 10px;
@@ -7008,13 +7007,35 @@ li.active a {
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-.book-cab-btn:hover{
+.book-cab-btn:hover {
   background-color: #000;
   color: #fff;
 }
 
-.note{
+.note {
   color: #e90a0b;
   font-size: 1.4rem;
   font-weight: 700;
+}
+
+.whatsapp {
+  position: fixed;
+  left: 30px;
+  bottom: 25px;
+  z-index: 999;
+  background-color: green;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.whatsapp i {
+  font-size: 2rem;
+  padding: 10px;
+  color: #fff;
+  background-color: var(--primary);
+  /* border-radius: 50%; */
 }

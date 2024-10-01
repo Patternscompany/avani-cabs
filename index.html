@@ -1532,6 +1532,12 @@
         </p>
       </div>
     </div>
+
+    <div class="whatsapp">
+      <a href="https://wa.me/+918341822404" target="_blank">
+        <i class="fa fa-whatsapp"></i>
+      </a>
+    </div>
    
     <script src="js/jquery-3.3.1.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
@@ -1546,64 +1552,6 @@
     <script src="js/jquery.magnific-popup.js"></script>
     <script src="js/xpedia.js"></script>
     <script type="text/javascript" async="" src="js/index.js"></script>
-    <div id="myAliceWebChat"></div>
-    <script>
-      !(function () {
-        var e, t, n, a;
-        window.MyAliceWebChat ||
-          (((t = document.createElement("div")).id = "myAliceWebChat"),
-            ((n = document.createElement("script")).type = "text/javascript"),
-            (n.async = !0),
-            (n.src = "https://widget.myalice.ai/index.js"),
-            (a = (e = document.body.getElementsByTagName("script"))[
-              e.length - 1
-            ]).parentNode.insertBefore(n, a),
-            a.parentNode.insertBefore(t, a),
-            n.addEventListener("load", function () {
-              MyAliceWebChat.init({
-                selector: "myAliceWebChat",
-                number: "+918341822404",
-                message: "",
-                color: "#25D366",
-                channel: "wa",
-                boxShadow: "none",
-                text: "",
-                theme: "light",
-                position: "left",
-                mb: "20px",
-                mx: "20px",
-                radius: "50%",
-              });
-            }));
-      })();
-
-      // <!--Add this script at the bottom of your HTML-->
-
-      document.querySelector('.x_slider_checout_right a').addEventListener('click', function (e) {
-        e.preventDefault(); // Prevent the default form submission
-
-        // Capture form data
-        var pickupLocation = document.querySelector('input[placeholder="City, Airport, Station, etc."]').value;
-        var dropoffLocation = document.querySelector('input[placeholder="City, Airport, Station, etc."]').value;
-        var pickupDate = document.querySelector('input[placeholder="Tue 16 Jan 2018"]').value;
-        var dropoffDate = document.querySelector('input[placeholder="Tue 16 Jan 2018"]').value;
-        var driverAge = document.getElementById('c1').checked ? 'Driver age between 20-70' : 'Driver age not specified';
-
-        // Format the message
-        var message = `Pick-up Location: ${pickupLocation}\nDrop-off Location: ${dropoffLocation}\nPick-up Date: ${pickupDate}\nDrop-off Date: ${dropoffDate}\n${driverAge}`;
-
-        // Encode the message
-        var encodedMessage = encodeURIComponent(message);
-
-        // WhatsApp API URL (replace PHONE_NUMBER with the actual number)
-        var whatsappUrl = `https://wa.me/7729052259?text=${encodedMessage}`;
-
-        // Open WhatsApp in a new tab
-        window.open(whatsappUrl, '_blank');
-      });
-
-
-    </script>
 
     <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
     <script>
