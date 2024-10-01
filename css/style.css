@@ -7012,3 +7012,9 @@ li.active a {
   background-color: #000;
   color: #fff;
 }
+
+.note{
+  color: #e90a0b;
+  font-size: 1.4rem;
+  font-weight: 700;
+}
