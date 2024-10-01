@@ -6975,7 +6975,15 @@ li.active a {
   margin-top: 17px;
   border-radius: 10px;
 }
-
+.tour-btn-submit{
+  background-color: red;
+  padding: 10px !important;
+  color:#fff !important;
+  margin-top: 17px;
+  border-radius: 10px;
+  border: 0;
+  max-width: 200px;
+}
 @media (max-width:992px){
   .tour-btn{
     margin-top: 0;
