@@ -953,7 +953,7 @@ li.active .dropdown-wrapper:hover > .menu-button:after {
 .hs_logo_wrapper {
   float: left;
   width: auto;
-  padding-top: 23px;
+  /* padding-top: 23px; */
 }
 .hs_main_menu {
   float: right;
