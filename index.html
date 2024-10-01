@@ -45,19 +45,20 @@
               </li>
               <li>
                 <div class="dropdown-wrapper menu-button"> <a class="menu-button active" href="#">Our Services<i
-                    class="fa fa-chevron-down pq-submenu-icon drop-down-icon pl-1"></i></a>
-                    <div class="drop-menu"> <a class="menu-button" href="hyderabad-airport-cabs.html">Hyderabad Airport Cabs</a>
-                        <a class="menu-button" href="hyderabad-sightseeing-cabs.html">Hyderabad Sightseeing Cabs</a>
-                        <a class="menu-button" href="hyderabad-outstation-cabs.html">Hyderabad Outstation Cabs</a>
-                        <a class="menu-button" href="srisailam-cabs.html">Srisailam Cabs</a>
-                    </div>
+                      class="fa fa-chevron-down pq-submenu-icon drop-down-icon pl-1"></i></a>
+                  <div class="drop-menu"> <a class="menu-button" href="hyderabad-airport-cabs.html">Hyderabad Airport
+                      Cabs</a>
+                    <a class="menu-button" href="hyderabad-sightseeing-cabs.html">Hyderabad Sightseeing Cabs</a>
+                    <a class="menu-button" href="hyderabad-outstation-cabs.html">Hyderabad Outstation Cabs</a>
+                    <a class="menu-button" href="srisailam-cabs.html">Srisailam Cabs</a>
+                  </div>
                 </div>
-            </li>
+              </li>
               <li>
                 <a class="menu-button single_menu" href="cars.html">Cars
                 </a>
               </li>
-             
+
               <li>
                 <a class="menu-button single_menu" href="contact.html">Contact
                 </a>
@@ -177,24 +178,24 @@
     </div>
   </div>
   <!-- hs Navigation End -->
-   <style>
-   
-   </style>
+  <style>
+
+  </style>
   <!-- hs Slider Start -->
   <div class="slider-area float_left">
     <div id="carousel-example-generic" class="carousel slide" data-interval="false" data-ride="carousel">
       <div class="carousel-inner" role="listbox">
         <div class="carousel-item active">
-          <video autoplay muted  playsinline loop class="background-video">
+          <video autoplay muted playsinline loop class="background-video">
             <source src="./videos/hero-section-video2.mp4" type="video/mp4" />
-          
+
           </video>
-        
+
           <div class="carousel-captions caption-1">
             <div class="container">
               <div class="row">
                 <div class="col-xl-7 col-lg-6 col-md-12 col-sm-12 col-12">
-                 
+
                 </div>
                 <div
                   class="col-xl-5 col-lg-6 col-md-12 col-sm-12 col-12 d-none d-sm-none d-md-none d-lg-block d-xl-block">
@@ -205,128 +206,71 @@
                           <div class="x_slider_form_heading_wrapper float_left">
                             <h3>Let’s find your perfect car</h3>
                           </div>
-                        
+
                           <div class="row">
                             <div class="col-md-12">
                               <div class="x_slider_form_input_wrapper float_left">
                                 <h3>Pick-up Location</h3>
-                                <input type="text" placeholder="City, Airport, Station, etc." />
+                                <input type="text" id="pickupLocation" placeholder="City, Airport, Station, etc." />
                               </div>
                             </div>
                             <div class="col-md-12">
                               <div class="x_slider_form_input_wrapper float_left">
                                 <h3>Drop-off Location</h3>
-                                <input type="text" placeholder="City, Airport, Station, etc." />
+                                <input type="text" id="dropoffLocation" placeholder="City, Airport, Station, etc." />
                               </div>
                             </div>
                             <div class="col-md-6">
                               <div class="form-sec-header">
                                 <h3>Pick-up Date</h3>
                                 <label class="cal-icon">Pick-up Date
-                                  <input type="text" placeholder="Tue 16 Jan 2018" class="form-control datepicker" />
+                                  <input type="text" id="pickupDate" placeholder="Tue 16 Jan 2018"
+                                    class="form-control datepicker" />
                                 </label>
                               </div>
                             </div>
                             <div class="col-md-6">
                               <div class="form-sec-header">
                                 <h3>Drop-Off Date</h3>
-                                <label class="cal-icon">Pick-up Date
-                                  <input type="text" placeholder="Tue 16 Jan 2018" class="form-control datepicker" />
+                                <label class="cal-icon">Drop-off Date
+                                  <input type="text" id="dropoffDate" placeholder="Tue 16 Jan 2018"
+                                    class="form-control datepicker" />
                                 </label>
                               </div>
                             </div>
+                            <!-- Time Selection -->
                             <div class="col-md-6">
-                              <div class="x_slider_select">
-                                <select class="myselect">
-                                  <option>01</option>
-                                  <option>02</option>
-                                  <option>03</option>
-                                  <option>04</option>
-                                  <option>05</option>
-                                  <option>06</option>
-                                  <option>07</option>
-                                  <option>08</option>
-                                  <option>09</option>
-                                  <option>10</option>
-                                  <option>11</option>
-                                  <option>12</option>
-                                </select>
-                                <i class="fa fa-clock-o"></i>
-                              </div>
-                              <div class="x_slider_select x_slider_select2">
-                                <select class="myselect">
-                                  <option>05</option>
-                                  <option>10</option>
-                                  <option>20</option>
-                                  <option>30</option>
-                                  <option>40</option>
-                                  <option>50</option>
-                                  <option>60</option>
-                                </select>
+                              <div class="x_slider_form_input_wrapper float_left">
+                                <h3>Pick-up Time</h3>
+                                <input type="time" id="pickupTime" />
                               </div>
                             </div>
                             <div class="col-md-6">
-                              <div class="x_slider_select">
-                                <select class="myselect">
-                                  <option>01</option>
-                                  <option>02</option>
-                                  <option>03</option>
-                                  <option>04</option>
-                                  <option>05</option>
-                                  <option>06</option>
-                                  <option>07</option>
-                                  <option>08</option>
-                                  <option>09</option>
-                                  <option>10</option>
-                                  <option>11</option>
-                                  <option>12</option>
-                                </select>
-                                <i class="fa fa-clock-o"></i>
-                              </div>
-                              <div class="x_slider_select x_slider_select2">
-                                <select class="myselect">
-                                  <option>05</option>
-                                  <option>10</option>
-                                  <option>20</option>
-                                  <option>30</option>
-                                  <option>40</option>
-                                  <option>50</option>
-                                  <option>60</option>
-                                </select>
+                              <div class="x_slider_form_input_wrapper float_left">
+                                <h3>Drop-off Time</h3>
+                                <input type="time" id="dropoffTime" />
                               </div>
                             </div>
                             <div class="col-md-12">
                               <div class="x_slider_checkbox float_left">
-                                <input type="checkbox" id="c1" name="cb" />
-                                <label for="c1">Driver age is between 20-70 &nbsp;<i class="fa fa-question-circle"></i>
-                                </label>
+                                <input type="checkbox" id="driverAgeConfirmation" name="cb" />
+                                <label for="driverAgeConfirmation">Driver age is between 20-70 &nbsp;<i
+                                    class="fa fa-question-circle"></i></label>
                               </div>
                             </div>
                             <div class="col-md-12">
                               <div class="x_slider_checkbox_bottom float_left">
-                                <div class="x_slider_checout_left">
-                                  <ul>
-                                    <li>
-                                      <i class="fa fa-check-circle"></i>&nbsp;&nbsp;24/7 Phone Support
-                                    </li>
-                                    <li>
-                                      <i class="fa fa-check-circle"></i>&nbsp;&nbsp;No Credit Card Fees
-                                    </li>
-                                    <li>
-                                      <i class="fa fa-check-circle"></i>&nbsp;&nbsp;High Luxurious Fleet
-                                    </li>
-                                  </ul>
-                                </div>
                                 <div class="x_slider_checout_right">
                                   <ul>
                                     <li>
-                                      <a href="#">Submit
+                                      <a href="#" onclick="sendWhatsApp()">Submit
                                         <i class="fa fa-arrow-right"></i></a>
                                     </li>
                                   </ul>
                                 </div>
                               </div>
                             </div>
+
                           </div>
                         </div>
                       </div>
@@ -337,16 +281,17 @@
             </div>
           </div>
         </div>
-       
+
       </div>
-      
-      
+
+
     </div>
   </div>
   <!-- hs Slider End -->
 
 
-  <div class="x_responsive_form_wrapper x_responsive_form_wrapper2 float_left d-block d-sm-block d-md-block d-lg-none d-xl-none">
+  <div
+    class="x_responsive_form_wrapper x_responsive_form_wrapper2 float_left d-block d-sm-block d-md-block d-lg-none d-xl-none">
     <div class="container">
       <div class="x_slider_form_main_wrapper float_left">
         <div class="x_slider_form_heading_wrapper float_left">
@@ -369,7 +314,8 @@
             <div class="form-sec-header">
               <h3>Pick-up Date</h3>
               <label class="cal-icon">Pick-up Date
-                <input type="text" placeholder="Tue 16 Jan 2018" class="form-control datepicker hasDatepicker" id="dp1727783142112">
+                <input type="text" placeholder="Tue 16 Jan 2018" class="form-control datepicker hasDatepicker"
+                  id="dp1727783142112">
               </label>
             </div>
           </div>
@@ -377,7 +323,8 @@
             <div class="form-sec-header">
               <h3>Drop-Off Date</h3>
               <label class="cal-icon">Pick-up Date
-                <input type="text" placeholder="Tue 16 Jan 2018" class="form-control datepicker hasDatepicker" id="dp1727783142113">
+                <input type="text" placeholder="Tue 16 Jan 2018" class="form-control datepicker hasDatepicker"
+                  id="dp1727783142113">
               </label>
             </div>
           </div>
@@ -482,13 +429,14 @@
 
 
   <style>
-    #lnk100{
+    #lnk100 {
       color: white;
     }
+
     .carousel-item {
       position: relative;
       overflow: hidden;
-      
+
     }
 
     .carousel-item .background-video {
@@ -556,9 +504,9 @@
       <div class="row">
         <div class="col-md-12">
           <div class="x_offer_car_heading_wrapper float_left py-5">
-          
+
             <h3>Top Rated Cab Services In Hyderabad</h3>
-            
+
           </div>
         </div>
         <div class="col-md-12 py-2">
@@ -566,42 +514,42 @@
             <div id="home" class="tab-pane active services-list">
               <div class="row">
                 <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6 col-12">
-                   <div>
+                  <div>
                     <img src="images/outstation-road.jpg" alt="">
-                   
+
                     <h2>Out Station</h2>
                     <a href="hyderabad-outstation-cabs.html">Read more</a>
-                   </div>
-                   <a href=""><Button>BOOK</Button></a>
+                  </div>
+                  <a href=""><Button>BOOK</Button></a>
                 </div>
                 <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6 col-12">
                   <div>
                     <img src="images/airport-road.jpg" alt="">
-                   
+
                     <h2>Airport Route</h2>
                     <a href="hyderabad-airport-cabs.html">Read more</a>
-                   </div>
-                   <a href=""><Button>BOOK</Button></a>
+                  </div>
+                  <a href=""><Button>BOOK</Button></a>
                 </div>
                 <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6 col-12">
                   <div>
                     <img src="images/srisailam-route.jpg" alt="">
-                   
+
                     <h2>Srisailam Route</h2>
                     <a href="srisailam-cabs.html">Read more</a>
-                   </div>
-                   <a href=""><Button>BOOK</Button></a>
+                  </div>
+                  <a href=""><Button>BOOK</Button></a>
                 </div>
                 <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6 col-12">
                   <div>
                     <img src="images/sightseeing-road.jpg" alt="">
-                   
+
                     <h2>Sightseeing station</h2>
                     <a href="hyderabad-sightseeing-cabs.html">Read more</a>
-                   </div>
-                   <a href=""><Button>BOOK</Button></a>
+                  </div>
+                  <a href=""><Button>BOOK</Button></a>
                 </div>
-               
+
 
               </div>
             </div>
@@ -609,103 +557,102 @@
         </div>
       </div>
     </div>
-    </div>
+  </div>
 
 
-<style>
- /* General Styling */
-.services {
-    background-color: #f8f8f8;
-    padding: 50px 0;
-}
+  <style>
+    /* General Styling */
+    .services {
+      background-color: #f8f8f8;
+      padding: 50px 0;
+    }
 
-.x_offer_car_heading_wrapper h3 {
-    text-align: center;
-    font-size: 30px;
-    font-weight: bold;
-    color: #333;
-    margin-bottom: 20px;
-}
+    .x_offer_car_heading_wrapper h3 {
+      text-align: center;
+      font-size: 30px;
+      font-weight: bold;
+      color: #333;
+      margin-bottom: 20px;
+    }
 
-.services-list .col-xl-3 {
-    margin-bottom: 30px;
-}
+    .services-list .col-xl-3 {
+      margin-bottom: 30px;
+    }
 
-.services-list div {
-    background-color: #fff;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    text-align: center;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
+    .services-list div {
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+      text-align: center;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
 
-.services-list div:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-}
+    .services-list div:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    }
 
-.services-list img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-    border-radius: 10px 10px 0 0;
-    margin-bottom: 15px;
-}
-
-.services-list h2 {
-    font-size: 24px;
-    color: #333;
-    margin: 15px 0;
-    font-weight: 600;
-}
-
-.services-list a {
-    display: inline-block;
-    text-decoration: none;
-    color: red;
-    font-weight: bold;
-    margin-top: 10px;
-}
-
-.services-list a:hover {
-    color: red;
-}
-
-/* Button Styling */
-.services-list Button {
-    background-color: #007bff;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    font-size: 16px;
-    cursor: pointer;
-    margin-top: 10px;
-    transition: background-color 0.3s ease;
-}
-
-.services-list Button:hover {
-    background-color: #0056b3;
-}
-
-/* Responsive Styling */
-@media (max-width: 768px) {
     .services-list img {
-        height: 150px;
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 10px 10px 0 0;
+      margin-bottom: 15px;
     }
 
     .services-list h2 {
-        font-size: 20px;
+      font-size: 24px;
+      color: #333;
+      margin: 15px 0;
+      font-weight: 600;
     }
 
+    .services-list a {
+      display: inline-block;
+      text-decoration: none;
+      color: red;
+      font-weight: bold;
+      margin-top: 10px;
+    }
+
+    .services-list a:hover {
+      color: red;
+    }
+
+    /* Button Styling */
     .services-list Button {
+      background-color: #007bff;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+      margin-top: 10px;
+      transition: background-color 0.3s ease;
+    }
+
+    .services-list Button:hover {
+      background-color: #0056b3;
+    }
+
+    /* Responsive Styling */
+    @media (max-width: 768px) {
+      .services-list img {
+        height: 150px;
+      }
+
+      .services-list h2 {
+        font-size: 20px;
+      }
+
+      .services-list Button {
         padding: 8px 16px;
         font-size: 14px;
+      }
     }
-}
-
-</style>
+  </style>
 
   <!-- xs offer car tabs Start -->
   <div class="x_offer_car_main_wrapper float_left">
@@ -724,7 +671,7 @@
         </div>
         <div class="col-md-12">
           <div class="x_offer_tabs_wrapper">
-          
+
           </div>
           <div class="tab-content">
             <div id="home" class="tab-pane active">
@@ -746,7 +693,7 @@
                         <h2><a href="#">Innova Crysta</a></h2>
                         <br />
                       </div>
-  
+
                       <!-- <div class="x_car_offer_bottom_btn float_left">
                         <ul>
                           <li><a href="#">Book now</a></li>
@@ -773,7 +720,7 @@
                         <h2><a href="#">Innova</a></h2>
                         <br />
                       </div>
-  
+
                       <!-- <div class="x_car_offer_bottom_btn float_left">
                         <ul>
                           <li><a href="#">Book now</a></li>
@@ -800,7 +747,7 @@
                         <h2><a href="#">Ertiga </a></h2>
                         <br />
                       </div>
-  
+
                       <!-- <div class="x_car_offer_bottom_btn float_left">
                         <ul>
                           <li><a href="#">Book now</a></li>
@@ -823,12 +770,12 @@
                       <div class="x_car_offer_img float_left">
                         <img src="images/Dzire.png" alt="img" class="w-100" />
                       </div>
-  
+
                       <div class="x_car_offer_heading float_left">
                         <h2><a href="#">Dzire </a></h2>
                         <br />
                       </div>
-  
+
                       <!-- <div class="x_car_offer_bottom_btn float_left">
                         <ul>
                           <li><a href="#">Book now</a></li>
@@ -855,7 +802,7 @@
                         <h2><a href="#">etios </a></h2>
                         <br />
                       </div>
-  
+
                       <!-- <div class="x_car_offer_bottom_btn float_left">
                         <ul>
                           <li><a href="#">Book now</a></li>
@@ -872,501 +819,524 @@
         </div>
       </div>
     </div>
-    </div>
-    <!-- xs offer car tabs End -->
-    <!-- btc team Wrapper Start -->
+  </div>
+  <!-- xs offer car tabs End -->
+  <!-- btc team Wrapper Start -->
 
 
-    <div class="x_about_seg_main_wrapper float_left padding_tb_100">
-      <div class="container">
-        <div class="row">
-          
-          <div class="col-xl-12 col-lg-6 col-md-12 col-sm-12 col-12">
-            <div class="x_offer_car_heading_wrapper float_left">
-             
-              <h3>Packages</h3>
-            
-            </div>
+  <div class="x_about_seg_main_wrapper float_left padding_tb_100">
+    <div class="container">
+      <div class="row">
+
+        <div class="col-xl-12 col-lg-6 col-md-12 col-sm-12 col-12">
+          <div class="x_offer_car_heading_wrapper float_left">
+
+            <h3>Packages</h3>
+
           </div>
-          <div class="col-lg-12">
-            <div class="pricing-section">
-              
-              <div class="pricing-cards">
-                <!-- Card 1 -->
-                <div class="pricing-card col-lg-4">
-                  <h2>Ramoji film City(1 day)</h2>
-                
-                  <ul>
-                    <li> <img src="images/Dzire.png" alt=""> Sedan <span>-</span>  <strong>₹3500</strong></li>
-                    <li><img src="images/Innova-crysta.png" alt=""> Crysta <span>-</span> <strong>₹5500</strong></li>
-                    <li><img src="images/Innova.png" alt=""> Innova <span>-</span> <strong>₹4500</strong></li>
-                    <li><img src="images/ertiga.png" alt=""> Ertiga<span>-</span> <strong>₹4200</strong></li>
-                  </ul>
-                  <a class="book-now-btn" target="_blank"
-                    href="https://api.whatsapp.com/send/?phone=8341822404&text=Hello%20Avani%20Cabs%20I'm%20looking%20for%20a%20cab%20">Book
-                    now</a>
-                </div>
-                <div class="pricing-card col-lg-4">
-                  <h2>Airport Pickup</h2>
-                
-                  <ul>
-                    <li> <img src="images/Dzire.png" alt=""> Sedan <span>-</span>  <strong>₹1300</strong></li>
-                    <li><img src="images/Innova-crysta.png" alt=""> Crysta <span>-</span> <strong>₹2600</strong></li>
-                    <li><img src="images/Innova.png" alt=""> Innova <span>-</span> <strong>₹2300</strong></li>
-                    <li><img src="images/ertiga.png" alt=""> Ertiga<span>-</span> <strong>₹1800</strong></li>
-                  </ul>
-                  <a class="book-now-btn" target="_blank"
-                    href="https://api.whatsapp.com/send/?phone=8341822404&text=Hello%20Avani%20Cabs%20I'm%20looking%20for%20a%20cab%20">Book
-                    now</a>
-                </div>
-                <div class="pricing-card col-lg-4">
-                  <h2>Srisailam Tour</h2>
-                
-                  <ul>
-                    <li> <span>Car Name</span> <strong>1 day</strong> <strong>2 day</strong></li>
-                    <li>Dzire <span>-</span>  <strong>₹7000</strong> <strong>₹9000</strong></li>
-                    <li>Crysta <span>-</span> <strong>₹10,000</strong> <strong>₹14,000</strong></li>
-                    <li>Innova <span>-</span> <strong>₹9,000</strong> <strong>₹12,000</strong></li>
-                    <li>Ertiga<span>-</span> <strong>₹9,000</strong><strong>₹11,000</strong></li>
-                  </ul>
-                  <a class="book-now-btn" target="_blank"
-                    href="https://api.whatsapp.com/send/?phone=8341822404&text=Hello%20Avani%20Cabs%20I'm%20looking%20for%20a%20cab%20">Book
-                    now</a>
-                </div>
-  
-               
+        </div>
+        <div class="col-lg-12">
+          <div class="pricing-section">
+
+            <div class="pricing-cards">
+              <!-- Card 1 -->
+              <div class="pricing-card col-lg-4">
+                <h2>Ramoji film City(1 day)</h2>
+
+                <ul>
+                  <li> <img src="images/Dzire.png" alt=""> Sedan <span>-</span> <strong>₹3500</strong></li>
+                  <li><img src="images/Innova-crysta.png" alt=""> Crysta <span>-</span> <strong>₹5500</strong></li>
+                  <li><img src="images/Innova.png" alt=""> Innova <span>-</span> <strong>₹4500</strong></li>
+                  <li><img src="images/ertiga.png" alt=""> Ertiga<span>-</span> <strong>₹4200</strong></li>
+                </ul>
+                <a class="book-now-btn" target="_blank"
+                  href="https://api.whatsapp.com/send/?phone=8341822404&text=Hello%20Avani%20Cabs%20I'm%20looking%20for%20a%20cab%20">Book
+                  now</a>
               </div>
+              <div class="pricing-card col-lg-4">
+                <h2>Airport Pickup</h2>
+
+                <ul>
+                  <li> <img src="images/Dzire.png" alt=""> Sedan <span>-</span> <strong>₹1300</strong></li>
+                  <li><img src="images/Innova-crysta.png" alt=""> Crysta <span>-</span> <strong>₹2600</strong></li>
+                  <li><img src="images/Innova.png" alt=""> Innova <span>-</span> <strong>₹2300</strong></li>
+                  <li><img src="images/ertiga.png" alt=""> Ertiga<span>-</span> <strong>₹1800</strong></li>
+                </ul>
+                <a class="book-now-btn" target="_blank"
+                  href="https://api.whatsapp.com/send/?phone=8341822404&text=Hello%20Avani%20Cabs%20I'm%20looking%20for%20a%20cab%20">Book
+                  now</a>
+              </div>
+              <div class="pricing-card col-lg-4">
+                <h2>Srisailam Tour</h2>
+
+                <ul>
+                  <li> <span>Car Name</span> <strong>1 day</strong> <strong>2 day</strong></li>
+                  <li>Dzire <span>-</span> <strong>₹7000</strong> <strong>₹9000</strong></li>
+                  <li>Crysta <span>-</span> <strong>₹10,000</strong> <strong>₹14,000</strong></li>
+                  <li>Innova <span>-</span> <strong>₹9,000</strong> <strong>₹12,000</strong></li>
+                  <li>Ertiga<span>-</span> <strong>₹9,000</strong><strong>₹11,000</strong></li>
+                </ul>
+                <a class="book-now-btn" target="_blank"
+                  href="https://api.whatsapp.com/send/?phone=8341822404&text=Hello%20Avani%20Cabs%20I'm%20looking%20for%20a%20cab%20">Book
+                  now</a>
+              </div>
+
+
             </div>
           </div>
-          <div class="col-12 pt-5">
-            <table>
-              <thead>
-                  <tr>
-                      <th>Package</th>
-                      <th>Vehicle Options & Price</th>
-                      <th>Places you will visit</th>
-                      <th>Action</th>
-                  </tr>
-              </thead>
-              <tbody>
-                  <tr>
-                      <td data-label="Package">Hyderabad Sightseeing Option 1</td>
-                      <td data-label="Vehicle Options & Price">
-                          Sedan (Swift DZire Equivalent): ₹3500<br>
-                          Ertiga 6 Seater: ₹4000<br>
-                          7 Seater Innova: ₹4500<br>
-                          7 Seater Innova Crysta: ₹5000
-                      </td>
-                      <td data-label="Places you will visit">
-                          1. Charminar<br>
-                          2. Salarjung Museum<br>
-                          3. Chowmahalla Palace<br>
-                          4. Nehru Zoological Park<br>
-                          5. Golconda Fort<br>
-                          6. Birla Mandir<br>
-                          7. Hussain Sagar Lake
-                      </td>
-                      <td data-label="Action"><a href="#">Book Now</a></td>
-                  </tr>
-                  <tr>
-                      <td data-label="Package">Hyderabad Sightseeing Option 2</td>
-                      <td data-label="Vehicle Options & Price">
-                          Sedan (Swift DZire Equivalent): ₹3500<br>
-                          Ertiga 6 Seater: ₹4500<br>
-                          7 Seater Innova: ₹5000<br>
-                          7 Seater Innova Crysta: ₹5500
-                      </td>
-                      <td data-label="Places you will visit">
-                          1. Ramoji Film City (Full Day)<br>
-                          2. Sangi Temple<br>
-                          Or<br>
-                          1. WonderLa
-                      </td>
-                      <td data-label="Action"><a href="#">Book Now</a></td>
-                  </tr>
-                  <tr>
-                      <td data-label="Package">Hyderabad Sightseeing Option 3</td>
-                      <td data-label="Vehicle Options & Price">
-                          Sedan (Swift DZire Equivalent): ₹4500<br>
-                          Ertiga 6 Seater: ₹5000<br>
-                          7 Seater Innova: ₹5500<br>
-                          7 Seater Innova Crysta: ₹6500
-                      </td>
-                      <td data-label="Places you will visit">
-                          1. Yadagirigutta<br>
-                          2. Surendrapuri
-                      </td>
-                      <td data-label="Action"><a href="#">Book Now</a></td>
-                  </tr>
-              </tbody>
+        </div>
+        <div class="col-12 pt-5">
+          <table>
+            <thead>
+              <tr>
+                <th>Package</th>
+                <th>Vehicle Options & Price</th>
+                <th>Places you will visit</th>
+                <th>Action</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td data-label="Package">Hyderabad Sightseeing Option 1</td>
+                <td data-label="Vehicle Options & Price">
+                  Sedan (Swift DZire Equivalent): ₹3500<br>
+                  Ertiga 6 Seater: ₹4000<br>
+                  7 Seater Innova: ₹4500<br>
+                  7 Seater Innova Crysta: ₹5000
+                </td>
+                <td data-label="Places you will visit">
+                  1. Charminar<br>
+                  2. Salarjung Museum<br>
+                  3. Chowmahalla Palace<br>
+                  4. Nehru Zoological Park<br>
+                  5. Golconda Fort<br>
+                  6. Birla Mandir<br>
+                  7. Hussain Sagar Lake
+                </td>
+                <td data-label="Action"><a href="#">Book Now</a></td>
+              </tr>
+              <tr>
+                <td data-label="Package">Hyderabad Sightseeing Option 2</td>
+                <td data-label="Vehicle Options & Price">
+                  Sedan (Swift DZire Equivalent): ₹3500<br>
+                  Ertiga 6 Seater: ₹4500<br>
+                  7 Seater Innova: ₹5000<br>
+                  7 Seater Innova Crysta: ₹5500
+                </td>
+                <td data-label="Places you will visit">
+                  1. Ramoji Film City (Full Day)<br>
+                  2. Sangi Temple<br>
+                  Or<br>
+                  1. WonderLa
+                </td>
+                <td data-label="Action"><a href="#">Book Now</a></td>
+              </tr>
+              <tr>
+                <td data-label="Package">Hyderabad Sightseeing Option 3</td>
+                <td data-label="Vehicle Options & Price">
+                  Sedan (Swift DZire Equivalent): ₹4500<br>
+                  Ertiga 6 Seater: ₹5000<br>
+                  7 Seater Innova: ₹5500<br>
+                  7 Seater Innova Crysta: ₹6500
+                </td>
+                <td data-label="Places you will visit">
+                  1. Yadagirigutta<br>
+                  2. Surendrapuri
+                </td>
+                <td data-label="Action"><a href="#">Book Now</a></td>
+              </tr>
+            </tbody>
           </table>
-          </div>
         </div>
       </div>
     </div>
+  </div>
 
-    <style>
-      .pricing-section {
-        text-align: center;
-        padding: 50px 0;
+  <style>
+    .pricing-section {
+      text-align: center;
+      padding: 50px 0;
+    }
+
+    .pricing-section h3 {
+      font-size: 20px;
+      margin-bottom: 20px;
+    }
+
+    .pricing-cards {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .pricing-card {
+
+      background-color: white;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      max-width: 300px;
+      transition: transform 0.3s ease;
+    }
+
+    .pricing-card:hover {
+      transform: scale(1.05);
+    }
+
+    .pricing-card h2 {
+      font-size: 20px;
+      margin-bottom: 10px;
+    }
+
+    .pricing-card .price {
+      font-size: 32px;
+      color: #e90a0b;
+      margin-bottom: 15px;
+    }
+
+    .pricing-card ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      text-align: center;
+    }
+
+    .pricing-card ul li {
+      padding: 15px 0;
+      font-weight: bolder;
+      text-transform: uppercase;
+      border-bottom: 1px solid #ddd;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+    }
+
+    .pricing-card ul li strong {
+      color: red;
+    }
+
+    .pricing-card ul li img {
+      width: 2.5rem;
+    }
+
+    .pricing-card ul li:hover img {
+      transform: scale(1.1);
+    }
+
+    .pricing-card ul li:last-child {
+      border-bottom: none;
+    }
+
+    .book-now-btn {
+      background-color: #0159B3;
+      color: white;
+      padding: 10px 15px;
+      border-radius: 5px;
+      text-decoration: none;
+      display: inline-block;
+      margin-top: 15px;
+      transition: background-color 0.3s ease;
+    }
+
+    .book-now-btn:hover {
+      background-color: #ddd;
+      color: #000;
+    }
+  </style>
+
+  <style>
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 20px;
+    }
+
+    th,
+    td {
+      padding: 12px;
+      text-align: left;
+      border: 1px solid #ddd;
+    }
+
+    th {
+      background-color: #0074cc;
+      color: white;
+    }
+
+    td a {
+      color: #0074cc;
+      text-decoration: none;
+    }
+
+    tr:hover {
+      background-color: #f1f1f1;
+    }
+
+    /* Responsive table - for smaller screens */
+    @media screen and (max-width: 768px) {
+
+      table,
+      thead,
+      tbody,
+      th,
+      td,
+      tr {
+        display: block;
       }
-  
-      .pricing-section h3 {
-        font-size: 20px;
+
+      th {
+        position: absolute;
+        top: -9999px;
+        left: -9999px;
+      }
+
+      tr {
+        border: 1px solid #ddd;
         margin-bottom: 20px;
       }
-  
-      .pricing-cards {
-        display: flex;
-        justify-content: center;
-        gap: 20px;
-        flex-wrap: wrap;
-      }
-  
-      .pricing-card {
-       
-        background-color: white;
-        padding: 20px;
-        border-radius: 8px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        max-width: 300px;
-        transition: transform 0.3s ease;
-      }
-  
-      .pricing-card:hover {
-        transform: scale(1.05);
-      }
-  
-      .pricing-card h2 {
-        font-size: 20px;
-        margin-bottom: 10px;
-      }
-  
-      .pricing-card .price {
-        font-size: 32px;
-        color: #e90a0b;
-        margin-bottom: 15px;
-      }
-  
-      .pricing-card ul {
-        list-style: none;
-        padding: 0;
-        margin: 0;
-        text-align: center;
-      }
-  
-      .pricing-card ul li {
-        padding: 15px 0;
-        font-weight:bolder;
-        text-transform: uppercase;
+
+      td {
+        border: none;
         border-bottom: 1px solid #ddd;
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
+        position: relative;
+        padding-left: 50%;
+        text-align: right;
       }
-      .pricing-card ul li strong{
-        color: red;
-      }
-  .pricing-card ul li img{
-    width: 2.5rem;
-  }
-  .pricing-card ul li:hover img{
-    transform: scale(1.1);
-  }
-      .pricing-card ul li:last-child {
-        border-bottom: none;
-      }
-  
-      .book-now-btn {
-        background-color: #0159B3;
-        color: white;
-        padding: 10px 15px;
-        border-radius: 5px;
-        text-decoration: none;
-        display: inline-block;
-        margin-top: 15px;
-        transition: background-color 0.3s ease;
-      }
-  
-      .book-now-btn:hover {
-        background-color: #ddd;
-        color: #000;
-      }
-    </style>
 
-<style>
-  table {
-           width: 100%;
-           border-collapse: collapse;
-           margin-bottom: 20px;
-       }
-       th, td {
-           padding: 12px;
-           text-align: left;
-           border: 1px solid #ddd;
-       }
-       th {
-           background-color: #0074cc;
-           color: white;
-       }
-       td a {
-           color: #0074cc;
-           text-decoration: none;
-       }
-       tr:hover {
-           background-color: #f1f1f1;
-       }
+      td:before {
+        position: absolute;
+        top: 12px;
+        left: 12px;
+        width: 45%;
+        padding-right: 10px;
+        white-space: nowrap;
+        text-align: left;
+        font-weight: bold;
+        content: attr(data-label);
+      }
+    }
+  </style>
 
-       /* Responsive table - for smaller screens */
-       @media screen and (max-width: 768px) {
-           table, thead, tbody, th, td, tr {
-               display: block;
-           }
-           th {
-               position: absolute;
-               top: -9999px;
-               left: -9999px;
-           }
-           tr {
-               border: 1px solid #ddd;
-               margin-bottom: 20px;
-           }
-           td {
-               border: none;
-               border-bottom: 1px solid #ddd;
-               position: relative;
-               padding-left: 50%;
-               text-align: right;
-           }
-           td:before {
-               position: absolute;
-               top: 12px;
-               left: 12px;
-               width: 45%;
-               padding-right: 10px;
-               white-space: nowrap;
-               text-align: left;
-               font-weight: bold;
-               content: attr(data-label);
-           }
-       }
- </style>
-
-    <!-- btc team Wrapper End -->
-    <!-- x counter Wrapper Start -->
-    <div class="x_counter_main_wrapper">
-      <div class="x_counter_img_overlay"></div>
-      <div class="container">
-        <div class="row">
-          <div class="col-md-12">
-            <div class="x_counter_car_heading_wrapper float_left">
-              <h4>Work Process</h4>
-              <h3>How it works</h3>
-              <p>
-                Renting with us is simple: select your dream car, whether for a
-                wedding or self-drive. Easy bookings, premium rides,
-                <br />unforgettable experiences. Drive your story with us!
-              </p>
-            </div>
+  <!-- btc team Wrapper End -->
+  <!-- x counter Wrapper Start -->
+  <div class="x_counter_main_wrapper">
+    <div class="x_counter_img_overlay"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="x_counter_car_heading_wrapper float_left">
+            <h4>Work Process</h4>
+            <h3>How it works</h3>
+            <p>
+              Renting with us is simple: select your dream car, whether for a
+              wedding or self-drive. Easy bookings, premium rides,
+              <br />unforgettable experiences. Drive your story with us!
+            </p>
           </div>
-          <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 col-12">
-            <div class="x_cou_main_box_wrapper">
-              <div class="x_icon"><i class="flaticon-airplane-shape"></i></div>
-              <h5><span>1.</span> <a href="#">pick destination</a></h5>
-              <!-- <p>
+        </div>
+        <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 col-12">
+          <div class="x_cou_main_box_wrapper">
+            <div class="x_icon"><i class="flaticon-airplane-shape"></i></div>
+            <h5><span>1.</span> <a href="#">pick destination</a></h5>
+            <!-- <p>
                 Proin nibh augue, suscipit a, scelerisque sed, lacinia in, mi.
                 Cras vel lorem.
               </p> -->
-            </div>
           </div>
-          <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 col-12">
-            <div class="x_cou_main_box_wrapper">
-              <div class="x_icon"><i class="flaticon-calendar"></i></div>
-              <h5><span>2.</span> <a href="#">select term</a></h5>
-              <!-- <p>
+        </div>
+        <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 col-12">
+          <div class="x_cou_main_box_wrapper">
+            <div class="x_icon"><i class="flaticon-calendar"></i></div>
+            <h5><span>2.</span> <a href="#">select term</a></h5>
+            <!-- <p>
                 Proin nibh augue, suscipit a, scelerisque sed, lacinia in, mi.
                 Cras vel lorem.
               </p> -->
-            </div>
           </div>
-          <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 col-12">
-            <div class="x_cou_main_box_wrapper">
-              <div class="x_icon"><i class="flaticon-sedan-car-front"></i></div>
-              <h5><span>3.</span> <a href="#">choose a car</a></h5>
-              <!-- <p>
+        </div>
+        <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 col-12">
+          <div class="x_cou_main_box_wrapper">
+            <div class="x_icon"><i class="flaticon-sedan-car-front"></i></div>
+            <h5><span>3.</span> <a href="#">choose a car</a></h5>
+            <!-- <p>
                 Proin nibh augue, suscipit a, scelerisque sed, lacinia in, mi.
                 Cras vel lorem.
               </p> -->
-            </div>
           </div>
-          <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 col-12">
-            <div class="x_cou_main_box_wrapper x_cou_main_box_wrapper_last">
-              <div class="x_icon">
-                <i class="flaticon-emoticon-square-smiling-face-with-closed-eyes"></i>
-              </div>
-              <h5><span>4.</span> <a href="#">enjoy the ride</a></h5>
-              <!-- <p>
+        </div>
+        <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 col-12">
+          <div class="x_cou_main_box_wrapper x_cou_main_box_wrapper_last">
+            <div class="x_icon">
+              <i class="flaticon-emoticon-square-smiling-face-with-closed-eyes"></i>
+            </div>
+            <h5><span>4.</span> <a href="#">enjoy the ride</a></h5>
+            <!-- <p>
                 Proin nibh augue, suscipit a, scelerisque sed, lacinia in, mi.
                 Cras vel lorem.
               </p> -->
-            </div>
           </div>
         </div>
       </div>
     </div>
+  </div>
 
-    <!-- x booking Wrapper End -->
-    <!-- xs offer car tabs Start -->
+  <!-- x booking Wrapper End -->
+  <!-- xs offer car tabs Start -->
 
-    <!-- btc team Wrapper Start -->
-    <div class="x_why_main_wrapper">
-      <div class="x_why_img_overlay"></div>
-      <div class="container">
-        <div class="x_why_left_main_wrapper">
-          <img src="images/exterior-right-front.png" alt="car_img" />
-        </div>
-        <div class="x_why_right_main_wrapper">
-          <h3 id="whyChooseUs">Why Choose Us ?</h3>
-          <p>
-            Avani Cabs is your best choice for car rentals with experienced drivers. Whether it's for weddings, airport pick-ups, or Hyderabad sightseeing, we have a range of quality vehicles to suit your needs. At Avani Cabs, we focus on comfort, reliability, and personalized service, making sure your trip is easy and worry-free. Our professional drivers ensure safe, on-time, and comfortable rides.
-            <br />
-            <br />We are committed to giving you the best experience possible. Our well-maintained cars and excellent service make every journey special. Trust Avani Cabs for your travel needs, where every ride becomes a lasting memory.
-          </p>
-          <ul>
-            <li>
-              <a href="contact.html">Contact us <i class="fa fa-arrow-right"></i></a>
-            </li>
-          </ul>
-        </div>
+  <!-- btc team Wrapper Start -->
+  <div class="x_why_main_wrapper">
+    <div class="x_why_img_overlay"></div>
+    <div class="container">
+      <div class="x_why_left_main_wrapper">
+        <img src="images/exterior-right-front.png" alt="car_img" />
+      </div>
+      <div class="x_why_right_main_wrapper">
+        <h3 id="whyChooseUs">Why Choose Us ?</h3>
+        <p>
+          Avani Cabs is your best choice for car rentals with experienced drivers. Whether it's for weddings, airport
+          pick-ups, or Hyderabad sightseeing, we have a range of quality vehicles to suit your needs. At Avani Cabs, we
+          focus on comfort, reliability, and personalized service, making sure your trip is easy and worry-free. Our
+          professional drivers ensure safe, on-time, and comfortable rides.
+          <br />
+          <br />We are committed to giving you the best experience possible. Our well-maintained cars and excellent
+          service make every journey special. Trust Avani Cabs for your travel needs, where every ride becomes a lasting
+          memory.
+        </p>
+        <ul>
+          <li>
+            <a href="contact.html">Contact us <i class="fa fa-arrow-right"></i></a>
+          </li>
+        </ul>
       </div>
     </div>
+  </div>
 
-    <!-- testomonials start -->
-    <div class="x_offer_car_main_wrapper float_left padding_tb_100">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-12">
-            <div class="x_offer_car_heading_wrapper float_left">
-              <h4>Testimonials</h4>
-              <h3>Top Reviews</h3>
-              <!-- <p>
+  <!-- testomonials start -->
+  <div class="x_offer_car_main_wrapper float_left padding_tb_100">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="x_offer_car_heading_wrapper float_left">
+            <h4>Testimonials</h4>
+            <h3>Top Reviews</h3>
+            <!-- <p>
                Fantastic experience with Avani Cabs! The process was easy, the car was pristine, and the self-drive adventure was a blast.
               </p> -->
-            </div>
           </div>
-          <div class="col-md-12">
-            <div class="screenshot">
-              <div class="owl-carousel screen nplr screen-loop">
-                <div>
-                  <div class="card valign-wrapper">
-                    <!-- Client's image -->
-                    <div class="card-image">
-                      <img src="images/client_1.jpg" alt="img" />
+        </div>
+        <div class="col-md-12">
+          <div class="screenshot">
+            <div class="owl-carousel screen nplr screen-loop">
+              <div>
+                <div class="card valign-wrapper">
+                  <!-- Client's image -->
+                  <div class="card-image">
+                    <img src="images/client_1.jpg" alt="img" />
+                  </div>
+                  <!-- /Client's image -->
+                  <div class="card-content center-align valign">
+                    <div class="testi_slide_star">
+                      <i class="fa fa-star"></i>
+                      <i class="fa fa-star"></i>
+                      <i class="fa fa-star"></i>
+                      <i class="fa fa-star"></i>
+                      <i class="fa fa-star-o"></i>
                     </div>
-                    <!-- /Client's image -->
-                    <div class="card-content center-align valign">
-                      <div class="testi_slide_star">
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star-o"></i>
-                      </div>
-                      <!-- Client's Feedback -->
-                      <p>
-                        “ Fantastic experience with Avani Cabs! The process was
-                        easy, the car was pristine, and the self-drive adventure
-                        was a blast. ”
-                      </p>
-                      <!-- /Client's Feedback -->
-                      <!-- Client's Name -->
-                      <p class="card-title">Ragavendra <span></span></p>
-                      <!-- /Client's Name -->
-                    </div>
+                    <!-- Client's Feedback -->
+                    <p>
+                      “ Fantastic experience with Avani Cabs! The process was
+                      easy, the car was pristine, and the self-drive adventure
+                      was a blast. ”
+                    </p>
+                    <!-- /Client's Feedback -->
+                    <!-- Client's Name -->
+                    <p class="card-title">Ragavendra <span></span></p>
+                    <!-- /Client's Name -->
                   </div>
                 </div>
-                <div>
-                  <div class="card valign-wrapper">
-                    <!-- Client's image -->
-                    <div class="card-image">
-                      <img src="images/client_2.jpg" alt="img" />
+              </div>
+              <div>
+                <div class="card valign-wrapper">
+                  <!-- Client's image -->
+                  <div class="card-image">
+                    <img src="images/client_2.jpg" alt="img" />
+                  </div>
+                  <!-- /Client's image -->
+                  <div class="card-content center-align valign">
+                    <div class="testi_slide_star">
+                      <i class="fa fa-star"></i>
+                      <i class="fa fa-star"></i>
+                      <i class="fa fa-star"></i>
+                      <i class="fa fa-star"></i>
+                      <i class="fa fa-star"></i>
                     </div>
-                    <!-- /Client's image -->
-                    <div class="card-content center-align valign">
-                      <div class="testi_slide_star">
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                      </div>
-                      <!-- Client's Feedback -->
-                      <p>
-                        “ Avani Cabs provided an elegant and reliable ride for
-                        our wedding. The attention to detail and professionalism
-                        were exceptional. ”
-                      </p>
-                      <!-- /Client's Feedback -->
-                      <!-- Client's Name -->
-                      <p class="card-title">HITESH RAJ<span></span></p>
-                      <!-- /Client's Name -->
-                    </div>
+                    <!-- Client's Feedback -->
+                    <p>
+                      “ Avani Cabs provided an elegant and reliable ride for
+                      our wedding. The attention to detail and professionalism
+                      were exceptional. ”
+                    </p>
+                    <!-- /Client's Feedback -->
+                    <!-- Client's Name -->
+                    <p class="card-title">HITESH RAJ<span></span></p>
+                    <!-- /Client's Name -->
                   </div>
                 </div>
-                <div>
-                  <div class="card valign-wrapper">
-                    <!-- Client's image -->
-                    <div class="card-image">
-                      <img src="images/client_3.jpg" alt="img" />
+              </div>
+              <div>
+                <div class="card valign-wrapper">
+                  <!-- Client's image -->
+                  <div class="card-image">
+                    <img src="images/client_3.jpg" alt="img" />
+                  </div>
+                  <!-- /Client's image -->
+                  <div class="card-content center-align valign">
+                    <div class="testi_slide_star">
+                      <i class="fa fa-star"></i>
+                      <i class="fa fa-star"></i>
+                      <i class="fa fa-star"></i>
+                      <i class="fa fa-star"></i>
+                      <i class="fa fa-star-o"></i>
                     </div>
-                    <!-- /Client's image -->
-                    <div class="card-content center-align valign">
-                      <div class="testi_slide_star">
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star-o"></i>
-                      </div>
-                      <!-- Client's Feedback -->
-                      <p>
-                        “ Self-driving with Avani Cabs was a delight. The clean
-                        and well-maintained car added comfort and style to our
-                        road trip. ”
-                      </p>
-                      <!-- /Client's Feedback -->
-                      <!-- Client's Name -->
-                      <p class="card-title">Nagaraju<span></span></p>
-                      <!-- /Client's Name -->
-                    </div>
+                    <!-- Client's Feedback -->
+                    <p>
+                      “ Self-driving with Avani Cabs was a delight. The clean
+                      and well-maintained car added comfort and style to our
+                      road trip. ”
+                    </p>
+                    <!-- /Client's Feedback -->
+                    <!-- Client's Name -->
+                    <p class="card-title">Nagaraju<span></span></p>
+                    <!-- /Client's Name -->
                   </div>
                 </div>
-                <div>
-                  <div class="card valign-wrapper">
-                    <!-- Client's image -->
-                    <div class="card-image">
-                      <img src="images/client_4.jpg" alt="img" />
+              </div>
+              <div>
+                <div class="card valign-wrapper">
+                  <!-- Client's image -->
+                  <div class="card-image">
+                    <img src="images/client_4.jpg" alt="img" />
+                  </div>
+                  <!-- /Client's image -->
+                  <div class="card-content center-align valign">
+                    <div class="testi_slide_star">
+                      <i class="fa fa-star"></i>
+                      <i class="fa fa-star"></i>
+                      <i class="fa fa-star"></i>
+                      <i class="fa fa-star"></i>
+                      <i class="fa fa-star"></i>
                     </div>
-                    <!-- /Client's image -->
-                    <div class="card-content center-align valign">
-                      <div class="testi_slide_star">
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                      </div>
-                      <!-- Client's Feedback -->
-                      <p>
-                        “Avani Cabs turned our road trip into a five-star
-                        experience. The self-drive option and their premium
-                        fleet made it unforgettable.”
-                      </p>
-                      <!-- /Client's Feedback -->
-                      <!-- Client's Name -->
-                      <p class="card-title">Ravi <span></span></p>
-                      <!-- /Client's Name -->
-                    </div>
+                    <!-- Client's Feedback -->
+                    <p>
+                      “Avani Cabs turned our road trip into a five-star
+                      experience. The self-drive option and their premium
+                      fleet made it unforgettable.”
+                    </p>
+                    <!-- /Client's Feedback -->
+                    <!-- Client's Name -->
+                    <p class="card-title">Ravi <span></span></p>
+                    <!-- /Client's Name -->
                   </div>
                 </div>
               </div>
@@ -1375,66 +1345,67 @@
         </div>
       </div>
     </div>
-    <!-- end testomonials -->
-   
-    <!-- x footer Wrapper Start -->
-    <div class="x_footer_top_main_wrapper float_left">
-      <div class="container">
-        <div class="row">
-          <div class="col-xl-3 col-lg-3 col-md-12 col-sm-12 col-12">
-            <div class="x_footer_top_left float_left">
-              <!-- <h3 class="avani-logo display-6 text-primary"><i class="flaticon-sedan-car-front logo-icon"></i>Avani Cabs
+  </div>
+  <!-- end testomonials -->
+
+  <!-- x footer Wrapper Start -->
+  <div class="x_footer_top_main_wrapper float_left">
+    <div class="container">
+      <div class="row">
+        <div class="col-xl-3 col-lg-3 col-md-12 col-sm-12 col-12">
+          <div class="x_footer_top_left float_left">
+            <!-- <h3 class="avani-logo display-6 text-primary"><i class="flaticon-sedan-car-front logo-icon"></i>Avani Cabs
               </h3> -->
-              <h3 class="avani-logo display-6 text-primary">
-                <i class="flaticon-sedan-car-front logo-icon"></i>Avani Cabs
-              </h3>
-            </div>
+            <h3 class="avani-logo display-6 text-primary">
+              <i class="flaticon-sedan-car-front logo-icon"></i>Avani Cabs
+            </h3>
           </div>
-          <div class="col-xl-9 col-lg-9 col-md-12 col-sm-12 col-12">
-            <div class="x_footer_top_right float_left">
-              <div class="x_footer_top_title_box x_footer_top_title_box1">
-                <div class="x_footer_top_title_box_icon_cont">
-                  <i class="flaticon-pie-chart"></i>
-                  <h3>latest News</h3>
-                </div>
+        </div>
+        <div class="col-xl-9 col-lg-9 col-md-12 col-sm-12 col-12">
+          <div class="x_footer_top_right float_left">
+            <div class="x_footer_top_title_box x_footer_top_title_box1">
+              <div class="x_footer_top_title_box_icon_cont">
+                <i class="flaticon-pie-chart"></i>
+                <h3>latest News</h3>
               </div>
-              <div class="x_footer_top_title_box">
-                <div class="x_footer_top_title_box_icon_cont">
-                  <i class="flaticon-phone-call"></i>
-                  <h3>Contact our Office</h3>
-                </div>
+            </div>
+            <div class="x_footer_top_title_box">
+              <div class="x_footer_top_title_box_icon_cont">
+                <i class="flaticon-phone-call"></i>
+                <h3>Contact our Office</h3>
               </div>
-              <div class="x_footer_top_title_box">
-                <div class="x_footer_top_title_box_icon_cont x_footer_top_title_box_icon_cont_first">
-                  <i class="flaticon-home-page"></i>
-                  <h3>Get Appointment</h3>
-                </div>
+            </div>
+            <div class="x_footer_top_title_box">
+              <div class="x_footer_top_title_box_icon_cont x_footer_top_title_box_icon_cont_first">
+                <i class="flaticon-home-page"></i>
+                <h3>Get Appointment</h3>
               </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-    <!-- x footer Wrapper End -->
-    <!-- x footer Wrapper Start -->
-    <div class="x_footer_bottom_main_wrapper float_left">
-      <div class="container">
-        <div class="row">
-          <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 col-12">
-            <div class="x_footer_bottom_box_wrapper float_left">
-              <h3>About Us</h3>
-              <p>
-                At Avani Cabs, we specialize in <br />
-                premium car rental services, offering a diverse fleet for
-                weddings. <br /><br />
-                Experience luxury, reliability, and unforgettable moments with
-                us.
-              </p>
-              <!-- <span
+  </div>
+  <!-- x footer Wrapper End -->
+  <!-- x footer Wrapper Start -->
+  <div class="x_footer_bottom_main_wrapper float_left">
+    <div class="container">
+      <div class="row">
+        <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 col-12">
+          <div class="x_footer_bottom_box_wrapper float_left">
+            <h3>About Us</h3>
+            <p>
+              At Avani Cabs, we specialize in <br />
+              premium car rental services, offering a diverse fleet for
+              weddings. <br /><br />
+              Experience luxury, reliability, and unforgettable moments with
+              us.
+            </p>
+            <!-- <span
                 ><a href="#"
                   >Read More  <i class="fa fa-angle-double-right"></i></a
               ></span> -->
-              <!-- <ul>
+            <!-- <ul>
                 <li>
                   <a href="#"><i class="fa fa-facebook"></i></a>
                 </li>
@@ -1445,125 +1416,128 @@
                   <a href="#"><i class="fa fa-linkedin"></i></a>
                 </li>
               </ul> -->
-            </div>
           </div>
-          <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 col-12">
-            <div class="x_footer_bottom_box_wrapper_second float_left">
-              <h3>Quick Links</h3>
-              <ul>
-                <li>
-                  <a href="index.html"><i class="fa fa-long-arrow-right"></i> &nbsp; Home</a>
-                </li>
-                <li>
-                  <a href="about.html"><i class="fa fa-long-arrow-right" id="whyChooseUs"></i>
-                    &nbsp; About</a>
-                </li>
-                <li>
-                  <a href="cars.html"><i class="fa fa-long-arrow-right"></i> &nbsp; Cars</a>
-                </li>
-                <li>
-                  <a href="contact.html"><i class="fa fa-long-arrow-right"></i> &nbsp; Contact</a>
-                </li>
-                <!-- <li>
+        </div>
+        <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 col-12">
+          <div class="x_footer_bottom_box_wrapper_second float_left">
+            <h3>Quick Links</h3>
+            <ul>
+              <li>
+                <a href="index.html"><i class="fa fa-long-arrow-right"></i> &nbsp; Home</a>
+              </li>
+              <li>
+                <a href="about.html"><i class="fa fa-long-arrow-right" id="whyChooseUs"></i>
+                  &nbsp; About</a>
+              </li>
+              <li>
+                <a href="cars.html"><i class="fa fa-long-arrow-right"></i> &nbsp; Cars</a>
+              </li>
+              <li>
+                <a href="contact.html"><i class="fa fa-long-arrow-right"></i> &nbsp; Contact</a>
+              </li>
+              <!-- <li>
                   <a href="contact.html"><i class="fa fa-long-arrow-right"></i> &nbsp; Best Price
                     Guarantee</a>
                 </li> -->
-              </ul>
-            </div>
+            </ul>
           </div>
-          <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 col-12">
-            <div class="x_footer_bottom_box_wrapper_second float_left">
-              <h3>Useful Links</h3>
-              <ul>
-                <li>
-                  <a href="hyderabad-airport-cabs.html"><i class="fa fa-long-arrow-right"></i> &nbsp; Hyderabad Airport Cabs</a>
-                </li>
-                <li>
-                  <a href="hyderabad-sightseeing-cabs.html"><i class="fa fa-long-arrow-right"></i> &nbsp; Hyderabad Sightseeing Cabs</a>
-                </li>
-                <li>
-                  <a href="hyderabad-outstation-cabs.html"><i class="fa fa-long-arrow-right"></i> &nbsp; Hyderabad Outstation Cabs</a>
-                </li>
-                <li>
-                  <a href="srisailam-cabs.html"><i class="fa fa-long-arrow-right"></i> &nbsp; Srisailam Cabs</a>
-                </li>
-                <!-- <li>
+        </div>
+        <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 col-12">
+          <div class="x_footer_bottom_box_wrapper_second float_left">
+            <h3>Useful Links</h3>
+            <ul>
+              <li>
+                <a href="hyderabad-airport-cabs.html"><i class="fa fa-long-arrow-right"></i> &nbsp; Hyderabad Airport
+                  Cabs</a>
+              </li>
+              <li>
+                <a href="hyderabad-sightseeing-cabs.html"><i class="fa fa-long-arrow-right"></i> &nbsp; Hyderabad
+                  Sightseeing Cabs</a>
+              </li>
+              <li>
+                <a href="hyderabad-outstation-cabs.html"><i class="fa fa-long-arrow-right"></i> &nbsp; Hyderabad
+                  Outstation Cabs</a>
+              </li>
+              <li>
+                <a href="srisailam-cabs.html"><i class="fa fa-long-arrow-right"></i> &nbsp; Srisailam Cabs</a>
+              </li>
+              <!-- <li>
                   <a href="contact.html"><i class="fa fa-long-arrow-right"></i> &nbsp; Contact Us</a>
                 </li> -->
-              </ul>
-            </div>
+            </ul>
           </div>
+        </div>
 
-          <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 col-12">
-            <div class="x_footer_bottom_box_wrapper_third float_left">
-              <h3>Have Questions?</h3>
-              <div class="x_footer_bottom_icon_section float_left">
-                <div class="x_footer_bottom_icon">
-                  <i class="flaticon-phone-call"></i>
-                </div>
-                <div class="x_footer_bottom_icon_cont">
-                  <h4>Toll Free calling in world</h4>
-                  <!-- <p></p> -->
-                  <p>
-                    <a href="tel:+91 8341822404">8341822404</a>
-                  </p>
-                  <!-- <p></p>? -->
-                </div>
+        <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 col-12">
+          <div class="x_footer_bottom_box_wrapper_third float_left">
+            <h3>Have Questions?</h3>
+            <div class="x_footer_bottom_icon_section float_left">
+              <div class="x_footer_bottom_icon">
+                <i class="flaticon-phone-call"></i>
               </div>
-              <div class="x_footer_bottom_icon_section x_footer_bottom_icon_section2 float_left">
-                <div class="x_footer_bottom_icon x_footer_bottom_icon2">
-                  <i class="flaticon-mail-send"></i>
-                </div>
-                <div class="x_footer_bottom_icon_cont">
-                  <h4>Email Us</h4>
-                  <p>
-                    <a href="mailto:avanicabs@gmail.com">
-                      avanicabs@gmail.com
-                    </a>
-                  </p>
-                </div>
+              <div class="x_footer_bottom_icon_cont">
+                <h4>Toll Free calling in world</h4>
+                <!-- <p></p> -->
+                <p>
+                  <a href="tel:+91 8341822404">8341822404</a>
+                </p>
+                <!-- <p></p>? -->
+              </div>
+            </div>
+            <div class="x_footer_bottom_icon_section x_footer_bottom_icon_section2 float_left">
+              <div class="x_footer_bottom_icon x_footer_bottom_icon2">
+                <i class="flaticon-mail-send"></i>
+              </div>
+              <div class="x_footer_bottom_icon_cont">
+                <h4>Email Us</h4>
+                <p>
+                  <a href="mailto:avanicabs@gmail.com">
+                    avanicabs@gmail.com
+                  </a>
+                </p>
               </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-    <div class="x_copyr_main_wrapper float_left">
-      <a href="javascript:" id="return-to-top"><i class="fa fa-arrow-up"></i></a>
-      <div class="container">
-        <p>
-          Copyright © 2024
-          <a href="https://www.thepatternscompany.com/">The Patterns Company</a>. All rights reserved.
-        </p>
-      </div>
+  </div>
+  <div class="x_copyr_main_wrapper float_left">
+    <a href="javascript:" id="return-to-top"><i class="fa fa-arrow-up"></i></a>
+    <div class="container">
+      <p>
+        Copyright © 2024
+        <a href="https://www.thepatternscompany.com/">The Patterns Company</a>. All rights reserved.
+      </p>
     </div>
+  </div>
 
-    <div class="whatsapp">
-      <a href="https://wa.me/+918341822404" target="_blank">
-        <i class="fa fa-whatsapp"></i>
-      </a>
-    </div>
-   
-    <script src="js/jquery-3.3.1.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/modernizr.js"></script>
-    <script src="js/select2.min.js"></script>
-    <script src="js/jquery.menu-aim.js"></script>
-    <script src="js/jquery-ui.js"></script>
-    <script src="js/jquery.nice-select.min.js"></script>
-    <script src="js/owl.carousel.js"></script>
-    <script src="js/own-menu.js"></script>
-    <script src="js/jquery.bxslider.min.js"></script>
-    <script src="js/jquery.magnific-popup.js"></script>
-    <script src="js/xpedia.js"></script>
-    <script type="text/javascript" async="" src="js/index.js"></script>
+  <div class="whatsapp">
+    <a href="https://wa.me/+918341822404" target="_blank">
+      <i class="fa fa-whatsapp"></i>
+    </a>
+  </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
-    <script>
-      window.onload = function () {
-        const end = Date.now() + 3 * 1000; // 3 seconds
-        const colors = ["#a786ff", "#fd8bbc", "#eca184", "#f8deb1"];
-  
+  <script src="js/jquery-3.3.1.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/modernizr.js"></script>
+  <script src="js/select2.min.js"></script>
+  <script src="js/jquery.menu-aim.js"></script>
+  <script src="js/jquery-ui.js"></script>
+  <script src="js/jquery.nice-select.min.js"></script>
+  <script src="js/owl.carousel.js"></script>
+  <script src="js/own-menu.js"></script>
+  <script src="js/jquery.bxslider.min.js"></script>
+  <script src="js/jquery.magnific-popup.js"></script>
+  <script src="js/xpedia.js"></script>
+  <script type="text/javascript" async="" src="js/index.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+  <script>
+    window.onload = function () {
+      const end = Date.now() + 3 * 1000; // 3 seconds
+      const colors = ["#a786ff", "#fd8bbc", "#eca184", "#f8deb1"];
+
 /*************  ✨ Codeium Command ⭐  *************/
         /**
          * Creates a confetti effect by firing two sets of confetti at different
@@ -1571,34 +1545,68 @@
          * for three seconds.
          */
 /******  6b607485-4b9a-484c-9763-032437f1dabf  *******/        const frame = () => {
-          if (Date.now() > end) return;
-  
-          confetti({
-            particleCount: 2,
-            angle: 60,
-            spread: 55,
-            startVelocity: 60,
-            origin: { x: 0, y: 0.5 },
-            colors: colors,
-          });
-  
-          confetti({
-            particleCount: 2,
-            angle: 120,
-            spread: 55,
-            startVelocity: 60,
-            origin: { x: 1, y: 0.5 },
-            colors: colors,
-          });
-  
-          requestAnimationFrame(frame);
-        };
-  
-        frame();
-      };
-    </script>
+        if (Date.now() > end) return;
 
-    <!-- custom js-->
+        confetti({
+          particleCount: 2,
+          angle: 60,
+          spread: 55,
+          startVelocity: 60,
+          origin: { x: 0, y: 0.5 },
+          colors: colors,
+        });
+
+        confetti({
+          particleCount: 2,
+          angle: 120,
+          spread: 55,
+          startVelocity: 60,
+          origin: { x: 1, y: 0.5 },
+          colors: colors,
+        });
+
+        requestAnimationFrame(frame);
+      };
+
+      frame();
+    };
+  </script>
+
+  <script>
+    function sendWhatsApp() {
+      // Get form field values
+      var pickupLocation = document.getElementById("pickupLocation").value;
+      var dropoffLocation = document.getElementById("dropoffLocation").value;
+      var pickupDate = document.getElementById("pickupDate").value;
+      var dropoffDate = document.getElementById("dropoffDate").value;
+      var pickupTime = document.getElementById("pickupTime").value;
+      var dropoffTime = document.getElementById("dropoffTime").value;
+      var driverAgeConfirmed = document.getElementById("driverAgeConfirmation").checked;
+
+      // Check if driver age is confirmed
+      if (!driverAgeConfirmed) {
+        alert("Please confirm that the driver age is between 20-70.");
+        return;  // Stop submission if not confirmed
+      }
+
+      // Format message for WhatsApp
+      var message = `Hello, I would like to book a cab.\n\n` +
+        `Pick-up Location: ${pickupLocation}\n` +
+        `Drop-off Location: ${dropoffLocation}\n` +
+        `Pick-up Date: ${pickupDate} at ${pickupTime}\n` +
+        `Drop-off Date: ${dropoffDate} at ${dropoffTime}\n` +
+        `Driver Age Confirmation: Yes, the driver is between 20-70 years.`;
+
+      // WhatsApp API URL (replace PHONE_NUMBER with the business number)
+      var whatsappURL = `https://wa.me/8341822404?text=${encodeURIComponent(message)}`;
+
+      // Redirect to WhatsApp with the pre-filled message
+      window.open(whatsappURL, '_blank');
+    }
+  </script>
+
+
+  <!-- custom js-->
 </body>
 
 </html>
