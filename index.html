@@ -776,6 +776,69 @@
               </div>
             </div>
           </div>
+          <div class="col-12 pt-5">
+            <table>
+              <thead>
+                  <tr>
+                      <th>Package</th>
+                      <th>Vehicle Options & Price</th>
+                      <th>Places you will visit</th>
+                      <th>Action</th>
+                  </tr>
+              </thead>
+              <tbody>
+                  <tr>
+                      <td data-label="Package">Hyderabad Sightseeing Option 1</td>
+                      <td data-label="Vehicle Options & Price">
+                          Sedan (Swift DZire Equivalent): ₹3500<br>
+                          Ertiga 6 Seater: ₹4000<br>
+                          7 Seater Innova: ₹4500<br>
+                          7 Seater Innova Crysta: ₹5000
+                      </td>
+                      <td data-label="Places you will visit">
+                          1. Charminar<br>
+                          2. Salarjung Museum<br>
+                          3. Chowmahalla Palace<br>
+                          4. Nehru Zoological Park<br>
+                          5. Golconda Fort<br>
+                          6. Birla Mandir<br>
+                          7. Hussain Sagar Lake
+                      </td>
+                      <td data-label="Action"><a href="#">Book Now</a></td>
+                  </tr>
+                  <tr>
+                      <td data-label="Package">Hyderabad Sightseeing Option 2</td>
+                      <td data-label="Vehicle Options & Price">
+                          Sedan (Swift DZire Equivalent): ₹3500<br>
+                          Ertiga 6 Seater: ₹4500<br>
+                          7 Seater Innova: ₹5000<br>
+                          7 Seater Innova Crysta: ₹5500
+                      </td>
+                      <td data-label="Places you will visit">
+                          1. Ramoji Film City (Full Day)<br>
+                          2. Sangi Temple<br>
+                          Or<br>
+                          1. WonderLa
+                      </td>
+                      <td data-label="Action"><a href="#">Book Now</a></td>
+                  </tr>
+                  <tr>
+                      <td data-label="Package">Hyderabad Sightseeing Option 3</td>
+                      <td data-label="Vehicle Options & Price">
+                          Sedan (Swift DZire Equivalent): ₹4500<br>
+                          Ertiga 6 Seater: ₹5000<br>
+                          7 Seater Innova: ₹5500<br>
+                          7 Seater Innova Crysta: ₹6500
+                      </td>
+                      <td data-label="Places you will visit">
+                          1. Yadagirigutta<br>
+                          2. Surendrapuri
+                      </td>
+                      <td data-label="Action"><a href="#">Book Now</a></td>
+                  </tr>
+              </tbody>
+          </table>
+          </div>
         </div>
       </div>
     </div>
@@ -869,7 +932,63 @@
       }
     </style>
 
+<style>
+  table {
+           width: 100%;
+           border-collapse: collapse;
+           margin-bottom: 20px;
+       }
+       th, td {
+           padding: 12px;
+           text-align: left;
+           border: 1px solid #ddd;
+       }
+       th {
+           background-color: #0074cc;
+           color: white;
+       }
+       td a {
+           color: #0074cc;
+           text-decoration: none;
+       }
+       tr:hover {
+           background-color: #f1f1f1;
+       }
 
+       /* Responsive table - for smaller screens */
+       @media screen and (max-width: 768px) {
+           table, thead, tbody, th, td, tr {
+               display: block;
+           }
+           th {
+               position: absolute;
+               top: -9999px;
+               left: -9999px;
+           }
+           tr {
+               border: 1px solid #ddd;
+               margin-bottom: 20px;
+           }
+           td {
+               border: none;
+               border-bottom: 1px solid #ddd;
+               position: relative;
+               padding-left: 50%;
+               text-align: right;
+           }
+           td:before {
+               position: absolute;
+               top: 12px;
+               left: 12px;
+               width: 45%;
+               padding-right: 10px;
+               white-space: nowrap;
+               text-align: left;
+               font-weight: bold;
+               content: attr(data-label);
+           }
+       }
+ </style>
 
     <!-- btc team Wrapper End -->
     <!-- x counter Wrapper Start -->
