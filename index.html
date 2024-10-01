@@ -301,22 +301,21 @@
           <div class="col-md-12">
             <div class="x_slider_form_input_wrapper float_left">
               <h3>Pick-up Location</h3>
-              <input type="text" placeholder="City, Airport, Station, etc.">
+              <input type="text" id="pickupLocationMobile" placeholder="City, Airport, Station, etc.">
             </div>
           </div>
           <div class="col-md-12">
             <div class="x_slider_form_input_wrapper float_left">
               <h3>Drop-off Location</h3>
-              <input type="text" placeholder="City, Airport, Station, etc.">
+              <input type="text" id="dropoffLocationMobile" placeholder="City, Airport, Station, etc.">
             </div>
           </div>
-         
+          
           <div class="col-md-6">
             <div class="form-sec-header">
               <h3>Pick-up Date</h3>
               <label class="cal-icon">Pick-up Date
-                <input type="text" id="pickupDate" placeholder="Tue 16 Jan 2018"
-                  class="form-control datepicker" />
+                <input type="text" id="pickupDateMobile" placeholder="Tue 16 Jan 2018" class="form-control datepicker" />
               </label>
             </div>
           </div>
@@ -324,38 +323,38 @@
             <div class="form-sec-header">
               <h3>Drop-Off Date</h3>
               <label class="cal-icon">Drop-off Date
-                <input type="text" id="dropoffDate" placeholder="Tue 16 Jan 2018"
-                  class="form-control datepicker" />
+                <input type="text" id="dropoffDateMobile" placeholder="Tue 16 Jan 2018" class="form-control datepicker" />
               </label>
             </div>
           </div>
+          
           <!-- Time Selection -->
           <div class="col-md-6">
             <div class="x_slider_form_input_wrapper float_left">
               <h3>Pick-up Time</h3>
-              <input type="time" id="pickupTime" />
+              <input type="time" id="pickupTimeMobile" />
             </div>
           </div>
           <div class="col-md-6">
             <div class="x_slider_form_input_wrapper float_left">
               <h3>Drop-off Time</h3>
-              <input type="time" id="dropoffTime" />
+              <input type="time" id="dropoffTimeMobile" />
             </div>
           </div>
+          
           <div class="col-md-12">
             <div class="x_slider_checkbox float_left">
-              <input type="checkbox" id="driverAgeConfirmation" name="cb" />
-              <label for="driverAgeConfirmation">Driver age is between 20-70 &nbsp;<i
-                  class="fa fa-question-circle"></i></label>
+              <input type="checkbox" id="driverAgeConfirmationMobile" name="cb" />
+              <label for="driverAgeConfirmationMobile">Driver age is between 20-70 &nbsp;<i class="fa fa-question-circle"></i></label>
             </div>
           </div>
+          
           <div class="col-md-12">
             <div class="x_slider_checkbox_bottom float_left">
               <div class="x_slider_checout_right">
                 <ul>
                   <li>
-                    <a href="#" onclick="sendWhatsAppMobile()">Submit
-                      <i class="fa fa-arrow-right"></i></a>
+                    <a href="#" onclick="sendWhatsAppMobile()">Submit <i class="fa fa-arrow-right"></i></a>
                   </li>
                 </ul>
               </div>
@@ -1538,33 +1537,35 @@
       window.open(whatsappURL, '_blank');
     }
   </script>
-  <script>
-    function sendWhatsAppMobile() {
-      // Get form field values
-      var pickupLocationMobile = document.getElementById("pickupLocation").value;
-      var dropoffLocationMobile = document.getElementById("dropoffLocation").value;
-      var pickupDateMobile = document.getElementById("pickupDate").value;
-      var dropoffDateMobile = document.getElementById("dropoffDate").value;
-      var pickupTimeMobile = document.getElementById("pickupTime").value;
-      var dropoffTimeMobile = document.getElementById("dropoffTime").value;
-      var driverAgeConfirmedMobile = document.getElementById("driverAgeConfirmation").checked;
+ 
+<script>
+  function sendWhatsAppMobile() {
+    // Get form field values
+    var pickupLocationMobile = document.getElementById("pickupLocationMobile").value;
+    var dropoffLocationMobile = document.getElementById("dropoffLocationMobile").value;
+    var pickupDateMobile = document.getElementById("pickupDateMobile").value;
+    var dropoffDateMobile = document.getElementById("dropoffDateMobile").value;
+    var pickupTimeMobile = document.getElementById("pickupTimeMobile").value;
+    var dropoffTimeMobile = document.getElementById("dropoffTimeMobile").value;
+    var driverAgeConfirmedMobile = document.getElementById("driverAgeConfirmationMobile").checked;
 
+    // Format message for WhatsApp
+    var driverAgeMessage = driverAgeConfirmedMobile ? "Yes, the driver is between 20-70 years." : "No confirmation about driver age.";
 
-      // Format message for WhatsApp
-      var messageMobile = `Hello, I would like to book a cab.\n\n` +
-        `Pick-up Location: ${pickupLocationMobile}\n` +
-        `Drop-off Location: ${dropoffLocationMobile}\n` +
-        `Pick-up Date: ${pickupDateMobile} at ${pickupTimeMobile}\n` +
-        `Drop-off Date: ${dropoffDateMobile} at ${dropoffTimeMobile}\n` +
-        `Driver Age Confirmation: Yes, the driver is between 20-70 years.`;
+    var messageMobile = `Hello, I would like to book a cab.\n\n` +
+      `Pick-up Location: ${pickupLocationMobile}\n` +
+      `Drop-off Location: ${dropoffLocationMobile}\n` +
+      `Pick-up Date: ${pickupDateMobile} at ${pickupTimeMobile}\n` +
+      `Drop-off Date: ${dropoffDateMobile} at ${dropoffTimeMobile}\n` +
+      `Driver Age Confirmation: ${driverAgeMessage}`;
 
-      // WhatsApp API URL (replace PHONE_NUMBER with the business number)
-      var whatsappURLL = `https://wa.me/8341822404?text=${encodeURIComponent(messageMobile)}`;
+    // WhatsApp API URL (replace PHONE_NUMBER with the business number)
+    var whatsappURLL = `https://wa.me/8341822404?text=${encodeURIComponent(messageMobile)}`;
 
-      // Redirect to WhatsApp with the pre-filled message
-      window.open(whatsappURLL, '_blank');
-    }
-  </script>
+    // Redirect to WhatsApp with the pre-filled message
+    window.open(whatsappURLL, '_blank');
+  }
+</script>
 
 
   <!-- custom js-->
