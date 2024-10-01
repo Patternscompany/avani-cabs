@@ -7018,3 +7018,22 @@ li.active a {
   font-size: 1.4rem;
   font-weight: 700;
 }
+
+.whatsapp{
+    position: fixed;
+    left: 30px;
+    bottom: 50px;
+    z-index: 999;
+  background-color: green;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+}
+
+.whatsapp i {
+  font-size: 2.0rem;
+    padding: 10px;
+    color: #fff;
+    background-color: var(--primary);
+    border-radius: 50%;
+}
