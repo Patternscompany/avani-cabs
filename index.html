@@ -386,26 +386,80 @@
        
       </div>
       
-      <!-- <ol class="carousel-indicators">
-        <li data-target="#carousel-example-generic" data-slide-to="0" class="active">
-          <span class="number"></span>
-        </li>
-        <li data-target="#carousel-example-generic" data-slide-to="1" class="">
-          <span class="number"></span>
-        </li>
-       
-      </ol>
-      <div class="carousel-nevigation">
-        <a class="prev" href="#carousel-example-generic" role="button" data-slide="prev">
-          <i class="fa fa-angle-left"></i>
-        </a>
-        <a class="next" href="#carousel-example-generic" role="button" data-slide="next">
-          <i class="fa fa-angle-right"></i>
-        </a>
-      </div> -->
+      
     </div>
   </div>
   <!-- hs Slider End -->
+
+
+  <div class="x_responsive_form_wrapper x_responsive_form_wrapper2 float_left d-block d-sm-block d-md-block d-lg-none d-xl-none">
+    <div class="container">
+      <div class="x_slider_form_main_wrapper float_left">
+        <div class="x_slider_form_heading_wrapper float_left">
+          <h3>Let’s find your perfect car</h3>
+        </div>
+        <form method="post" action="//submit.form" onSubmit="return validateForm();">
+          <div style="max-width: 400px;">
+          </div>
+          <div style="padding-bottom: 18px;">Pickup Location<span style="color: red;"> *</span><br/>
+          <input type="text" id="data_1" name="data_1" style="max-width : 450px;" class="form-control" placeholder="City, Place, etc.."/>
+          </div>
+          <div style="padding-bottom: 18px;">Drop Location<span style="color: red;"> *</span><br/>
+          <input type="text" id="data_2" name="data_2" style="max-width : 450px;" class="form-control" placeholder="City, Place, etc.."/>
+          </div>
+          <div style="padding-bottom: 18px;">PICKUP DATE<span style="color: red;"> *</span><br/>
+          <input type="text" id="data_3" name="data_3" style="max-width : 450px;" class="form-control" placeholder="Thu Oct 10 2024"/>
+          </div>
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/pikaday/1.4.0/pikaday.min.js" type="text/javascript"></script>
+          <link href="https://cdnjs.cloudflare.com/ajax/libs/pikaday/1.4.0/css/pikaday.min.css" rel="stylesheet" type="text/css" />
+          <script type="text/javascript">new Pikaday({ field: document.getElementById('data_3') });</script>
+          <div style="padding-bottom: 18px;">DROP DATE<span style="color: red;"> *</span><br/>
+          <input type="text" id="data_4" name="data_4" style="max-width : 450px;" class="form-control" placeholder="Mon Oct 21 2024"/>
+          </div>
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/pikaday/1.4.0/pikaday.min.js" type="text/javascript"></script>
+          <link href="https://cdnjs.cloudflare.com/ajax/libs/pikaday/1.4.0/css/pikaday.min.css" rel="stylesheet" type="text/css" />
+          <script type="text/javascript">new Pikaday({ field: document.getElementById('data_4') });</script>
+          <div style="padding-bottom: 18px;">Driver Age<br/>
+          <span><input type="radio" id="data_5_0" name="data_5" value="Age Between 20-70"/>Age Between 20-70</span><br/>
+          <span><input type="radio" id="data_5_1" name="data_5" value="Any Age"/>Any Age</span><br/>
+          </div>
+          <div style="padding-bottom: 18px;" ><input  name="skip_Submit" value="Submit" type="submit" class="tour-btn-submit"/></div>
+          <div>
+          <div style="float:right"><a href="https://www.100forms.com" id="lnk100" title="form to email">form to email</a></div>
+          <script src="https://www.100forms.com/js/FORMKEY:9GLY2R9P78PD" type="text/javascript"></script>
+          </div>
+          </form>
+          
+          <script type="text/javascript">
+          function validateForm() {
+          if (isEmpty(document.getElementById('data_1').value.trim())) {
+          alert('Pickup Location is required!');
+          return false;
+          }
+          if (isEmpty(document.getElementById('data_2').value.trim())) {
+          alert('Drop Location is required!');
+          return false;
+          }
+          if (isEmpty(document.getElementById('data_3').value.trim())) {
+          alert('Pickup Date is required!');
+          return false;
+          }
+          if (isEmpty(document.getElementById('data_4').value.trim())) {
+          alert('Drop Date is required!');
+          return false;
+          }
+          return true;
+          }
+          function isEmpty(str) { return (str.length === 0 || !str.trim()); }
+          function validateEmail(email) {
+          var re = /^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,15}(?:\.[a-z]{2})?)$/i;
+          return isEmpty(email) || re.test(email);
+          }
+          </script>
+      </div>
+    </div>
+  </div>
+
 
   <style>
     #lnk100{
