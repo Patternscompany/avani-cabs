@@ -310,113 +310,52 @@
               <input type="text" placeholder="City, Airport, Station, etc.">
             </div>
           </div>
+         
           <div class="col-md-6">
             <div class="form-sec-header">
               <h3>Pick-up Date</h3>
               <label class="cal-icon">Pick-up Date
-                <input type="text" placeholder="Tue 16 Jan 2018" class="form-control datepicker hasDatepicker"
-                  id="dp1727783142112">
+                <input type="text" id="pickupDate" placeholder="Tue 16 Jan 2018"
+                  class="form-control datepicker" />
               </label>
             </div>
           </div>
           <div class="col-md-6">
             <div class="form-sec-header">
               <h3>Drop-Off Date</h3>
-              <label class="cal-icon">Pick-up Date
-                <input type="text" placeholder="Tue 16 Jan 2018" class="form-control datepicker hasDatepicker"
-                  id="dp1727783142113">
+              <label class="cal-icon">Drop-off Date
+                <input type="text" id="dropoffDate" placeholder="Tue 16 Jan 2018"
+                  class="form-control datepicker" />
               </label>
             </div>
           </div>
+          <!-- Time Selection -->
           <div class="col-md-6">
-            <div class="x_slider_select">
-              <select class="myselect">
-                <option>01</option>
-                <option>02</option>
-                <option>03</option>
-                <option>04</option>
-                <option>05</option>
-                <option>06</option>
-                <option>07</option>
-                <option>08</option>
-                <option>09</option>
-                <option>10</option>
-                <option>11</option>
-                <option>12</option>
-              </select>
-              <i class="fa fa-clock-o"></i>
-            </div>
-            <div class="x_slider_select x_slider_select2">
-              <select class="myselect">
-                <option>05</option>
-                <option>10</option>
-                <option>20</option>
-                <option>30</option>
-                <option>40</option>
-                <option>50</option>
-                <option>60</option>
-              </select>
+            <div class="x_slider_form_input_wrapper float_left">
+              <h3>Pick-up Time</h3>
+              <input type="time" id="pickupTime" />
             </div>
           </div>
           <div class="col-md-6">
-            <div class="x_slider_select">
-              <select class="myselect">
-                <option>01</option>
-                <option>02</option>
-                <option>03</option>
-                <option>04</option>
-                <option>05</option>
-                <option>06</option>
-                <option>07</option>
-                <option>08</option>
-                <option>09</option>
-                <option>10</option>
-                <option>11</option>
-                <option>12</option>
-              </select>
-              <i class="fa fa-clock-o"></i>
-            </div>
-            <div class="x_slider_select x_slider_select2">
-              <select class="myselect">
-                <option>05</option>
-                <option>10</option>
-                <option>20</option>
-                <option>30</option>
-                <option>40</option>
-                <option>50</option>
-                <option>60</option>
-              </select>
+            <div class="x_slider_form_input_wrapper float_left">
+              <h3>Drop-off Time</h3>
+              <input type="time" id="dropoffTime" />
             </div>
           </div>
           <div class="col-md-12">
             <div class="x_slider_checkbox float_left">
-              <input type="checkbox" id="c5" name="cb">
-              <label for="c5">Driver age is between 20-70 &nbsp;<i class="fa fa-question-circle"></i>
-              </label>
+              <input type="checkbox" id="driverAgeConfirmation" name="cb" />
+              <label for="driverAgeConfirmation">Driver age is between 20-70 &nbsp;<i
+                  class="fa fa-question-circle"></i></label>
             </div>
           </div>
           <div class="col-md-12">
             <div class="x_slider_checkbox_bottom float_left">
-              <div class="x_slider_checout_left">
-                <ul>
-                  <li>
-                    <i class="fa fa-check-circle"></i>&nbsp;&nbsp;24/7 Phone
-                    Support
-                  </li>
-                  <li>
-                    <i class="fa fa-check-circle"></i>&nbsp;&nbsp;No Credit
-                    Card Fees
-                  </li>
-                  <li>
-                    <i class="fa fa-check-circle"></i>&nbsp;&nbsp; High
-                    Luxurious Fleet
-                  </li>
-                </ul>
-              </div>
               <div class="x_slider_checout_right">
                 <ul>
                   <li>
-                    <a href="#">Submit <i class="fa fa-arrow-right"></i></a>
+                    <a href="#" onclick="sendWhatsAppMobile()">Submit
+                      <i class="fa fa-arrow-right"></i></a>
                   </li>
                 </ul>
               </div>
@@ -885,7 +824,7 @@
             </div>
           </div>
         </div>
-        <div class="col-12 pt-5">
+        <div class="col-12 pt-5 packages-table">
           <table>
             <thead>
               <tr>
@@ -1046,57 +985,57 @@
   </style>
 
   <style>
-    table {
+    .packages-table table {
       width: 100%;
       border-collapse: collapse;
       margin-bottom: 20px;
     }
 
-    th,
-    td {
+    .packages-table th,
+    .packages-table td {
       padding: 12px;
       text-align: left;
       border: 1px solid #ddd;
     }
 
-    th {
+    .packages-table th {
       background-color: #0074cc;
       color: white;
     }
 
-    td a {
+    .packages-table td a {
       color: #0074cc;
       text-decoration: none;
     }
 
-    tr:hover {
+    .packages-table tr:hover {
       background-color: #f1f1f1;
     }
 
     /* Responsive table - for smaller screens */
     @media screen and (max-width: 768px) {
 
-      table,
-      thead,
-      tbody,
-      th,
-      td,
-      tr {
+      .packages-table table,
+      .packages-table thead,
+      .packages-table tbody,
+      .packages-table th,
+      .packages-table td,
+      .packages-table tr {
         display: block;
       }
 
-      th {
+      .packages-table th {
         position: absolute;
         top: -9999px;
         left: -9999px;
       }
 
-      tr {
+      .packages-table tr {
         border: 1px solid #ddd;
         margin-bottom: 20px;
       }
 
-      td {
+      .packages-table td {
         border: none;
         border-bottom: 1px solid #ddd;
         position: relative;
@@ -1104,7 +1043,7 @@
         text-align: right;
       }
 
-      td:before {
+      .packages-table td:before {
         position: absolute;
         top: 12px;
         left: 12px;
@@ -1583,11 +1522,6 @@
       var dropoffTime = document.getElementById("dropoffTime").value;
       var driverAgeConfirmed = document.getElementById("driverAgeConfirmation").checked;
 
-      // Check if driver age is confirmed
-      if (!driverAgeConfirmed) {
-        alert("Please confirm that the driver age is between 20-70.");
-        return;  // Stop submission if not confirmed
-      }
 
       // Format message for WhatsApp
       var message = `Hello, I would like to book a cab.\n\n` +
@@ -1602,6 +1536,33 @@
 
       // Redirect to WhatsApp with the pre-filled message
       window.open(whatsappURL, '_blank');
+    }
+  </script>
+  <script>
+    function sendWhatsAppMobile() {
+      // Get form field values
+      var pickupLocationMobile = document.getElementById("pickupLocation").value;
+      var dropoffLocationMobile = document.getElementById("dropoffLocation").value;
+      var pickupDateMobile = document.getElementById("pickupDate").value;
+      var dropoffDateMobile = document.getElementById("dropoffDate").value;
+      var pickupTimeMobile = document.getElementById("pickupTime").value;
+      var dropoffTimeMobile = document.getElementById("dropoffTime").value;
+      var driverAgeConfirmedMobile = document.getElementById("driverAgeConfirmation").checked;
+
+
+      // Format message for WhatsApp
+      var messageMobile = `Hello, I would like to book a cab.\n\n` +
+        `Pick-up Location: ${pickupLocationMobile}\n` +
+        `Drop-off Location: ${dropoffLocationMobile}\n` +
+        `Pick-up Date: ${pickupDateMobile} at ${pickupTimeMobile}\n` +
+        `Drop-off Date: ${dropoffDateMobile} at ${dropoffTimeMobile}\n` +
+        `Driver Age Confirmation: Yes, the driver is between 20-70 years.`;
+
+      // WhatsApp API URL (replace PHONE_NUMBER with the business number)
+      var whatsappURLL = `https://wa.me/8341822404?text=${encodeURIComponent(messageMobile)}`;
+
+      // Redirect to WhatsApp with the pre-filled message
+      window.open(whatsappURLL, '_blank');
     }
   </script>
 
