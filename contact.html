@@ -468,13 +468,16 @@
             <h3>Useful Links</h3>
             <ul>
               <li>
-                <a href="hyderabad-airport-cabs.html"><i class="fa fa-long-arrow-right"></i> &nbsp; Hyderabad Airport Cabs</a>
+                <a href="hyderabad-airport-cabs.html"><i class="fa fa-long-arrow-right"></i> &nbsp; Hyderabad Airport
+                  Cabs</a>
               </li>
               <li>
-                <a href="hyderabad-sightseeing-cabs.html"><i class="fa fa-long-arrow-right"></i> &nbsp; Hyderabad Sightseeing Cabs</a>
+                <a href="hyderabad-sightseeing-cabs.html"><i class="fa fa-long-arrow-right"></i> &nbsp; Hyderabad
+                  Sightseeing Cabs</a>
               </li>
               <li>
-                <a href="hyderabad-outstation-cabs.html"><i class="fa fa-long-arrow-right"></i> &nbsp; Hyderabad Outstation Cabs</a>
+                <a href="hyderabad-outstation-cabs.html"><i class="fa fa-long-arrow-right"></i> &nbsp; Hyderabad
+                  Outstation Cabs</a>
               </li>
               <li>
                 <a href="srisailam-cabs.html"><i class="fa fa-long-arrow-right"></i> &nbsp; Srisailam Cabs</a>
@@ -550,26 +553,24 @@
   <script src="js/jquery.magnific-popup.js"></script>
   <script src="js/xpedia.js"></script>
   <!-- custom js-->
-  <!-- <script>
-      function initMap() {
-        var uluru = {
-          lat: -36.742775,
-          lng: 174.731559,
-        };
-        var map = new google.maps.Map(document.getElementById('map'), {
-          zoom: 15,
-          scrollwheel: false,
-          center: uluru,
-        });
-        var marker = new google.maps.Marker({
-          position: uluru,
-          map: map,
-        });
-      }
-    </script>
-    <script async="" defer="" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCmdG8C6ItElq5ipuFv6O9AE48wyZm_vqU&amp;callback=initMap"></script> -->
+  <script type="text/javascript" async="" src="js/index.js">    document.getElementById('sendMessageBtn').addEventListener('click', function () {
+      var firstName = document.getElementById('firstName').value;
+      var lastName = document.getElementById('lastName').value;
+      var email = document.getElementById('email').value;
+      var phone = document.getElementById('phone').value;
+      var comment = document.getElementById('comment').value;
 
+      // Create the WhatsApp message
+      var message = `Hello, I am ${firstName} ${lastName}.%0AEmail: ${email}%0APhone: ${phone}%0AComment: ${comment}`;
 
+      // WhatsApp phone number (with country code)
+      var phoneNumber = '+918341822404';
+
+      // Open WhatsApp with the pre-filled message
+      var whatsappUrl = `https://wa.me/${phoneNumber}?text=${message}`;
+      window.open(whatsappUrl, '_blank');
+    });
+  </script>
 
 </body>
 
