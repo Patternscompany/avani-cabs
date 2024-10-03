@@ -6984,6 +6984,19 @@ li.active a {
   border: 0;
   max-width: 200px;
 }
+.tour-btn{
+  animation: btn 1s linear infinite;
+
+}
+@keyframes btn{
+  50%,100%{
+    box-shadow: 3px 3px 6px rgb(233, 229, 229), -3px -3px 6px rgb(222, 216, 216),6px 6px 12px green,-6px -6px 12px green;
+  }
+  0%{
+    box-shadow:unset;
+  }
+ 
+}
 @media (max-width: 992px) {
   .tour-btn {
     margin-top: 0;
