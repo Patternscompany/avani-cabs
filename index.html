@@ -214,7 +214,7 @@
                             </div>
                             <div class="col-md-12">
                               <div class="x_slider_form_input_wrapper float_left">
-                                <h3>Phone  Number</h3>
+                                <h3>Phone Number</h3>
                                 <input type="text" id="number" placeholder="Enter your number here." />
                               </div>
                             </div>
@@ -224,19 +224,18 @@
                                 <input type="text" id="pickupLocation" placeholder="City, Airport, Station, etc." />
                               </div>
                             </div>
-                           
                             <div class="col-md-12">
                               <div class="x_slider_form_input_wrapper float_left">
                                 <h3>Drop-off Location</h3>
                                 <input type="text" id="dropoffLocation" placeholder="City, Airport, Station, etc." />
                               </div>
                             </div>
+                            
                             <div class="col-md-6">
                               <div class="form-sec-header">
                                 <h3>Pick-up Date</h3>
                                 <label class="cal-icon">Pick-up Date
-                                  <input type="text" id="pickupDate" placeholder="Tue 16 Jan 2018"
-                                    class="form-control datepicker" />
+                                  <input type="text" id="pickupDate" placeholder="Tue 16 Jan 2018" class="form-control datepicker" />
                                 </label>
                               </div>
                             </div>
@@ -244,11 +243,11 @@
                               <div class="form-sec-header">
                                 <h3>Drop-Off Date</h3>
                                 <label class="cal-icon">Drop-off Date
-                                  <input type="text" id="dropoffDate" placeholder="Tue 16 Jan 2018"
-                                    class="form-control datepicker" />
+                                  <input type="text" id="dropoffDate" placeholder="Tue 16 Jan 2018" class="form-control datepicker" />
                                 </label>
                               </div>
                             </div>
+                            
                             <!-- Time Selection -->
                             <div class="col-md-6">
                               <div class="x_slider_form_input_wrapper float_left">
@@ -262,27 +261,27 @@
                                 <input type="time" id="dropoffTime" />
                               </div>
                             </div>
+                          
                             <div class="col-md-12">
                               <div class="x_slider_checkbox float_left">
                                 <input type="checkbox" id="driverAgeConfirmation" name="cb" />
-                                <label for="driverAgeConfirmation">Driver age is between 20-70 &nbsp;<i
-                                    class="fa fa-question-circle"></i></label>
+                                <label for="driverAgeConfirmation">Driver age is between 20-70 &nbsp;<i class="fa fa-question-circle"></i></label>
                               </div>
                             </div>
+                          
                             <div class="col-md-12">
                               <div class="x_slider_checkbox_bottom float_left">
                                 <div class="x_slider_checout_right">
                                   <ul>
                                     <li>
-                                      <a href="#" onclick="sendWhatsApp()">Submit
-                                        <i class="fa fa-arrow-right"></i></a>
+                                      <a href="#" onclick="sendWhatsApp(); return false;">Submit <i class="fa fa-arrow-right"></i></a>
                                     </li>
                                   </ul>
                                 </div>
                               </div>
                             </div>
-
                           </div>
+                          
                         </div>
                       </div>
                     </div>
@@ -1560,38 +1559,40 @@
     };
   </script>
 
-  <script>
-    function sendWhatsApp() {
-      // Get form field values
-      var name = document.getElementById("name").value;
-      var number = document.getElementById("number").value;
-      var pickupLocation = document.getElementById("pickupLocation").value;
-      var dropoffLocation = document.getElementById("dropoffLocation").value;
-      var pickupDate = document.getElementById("pickupDate").value;
-      var dropoffDate = document.getElementById("dropoffDate").value;
-      var pickupTime = document.getElementById("pickupTime").value;
-      var dropoffTime = document.getElementById("dropoffTime").value;
-      var driverAgeConfirmedDesktop = document.getElementById("driverAgeConfirmation").checked;
+<script>
+  function sendWhatsApp() {
+    // Get form field values
+    var name = document.getElementById("name").value;
+    var number = document.getElementById("number").value;
+    var pickupLocation = document.getElementById("pickupLocation").value;
+    var dropoffLocation = document.getElementById("dropoffLocation").value;
+    var pickupDate = document.getElementById("pickupDate").value;
+    var dropoffDate = document.getElementById("dropoffDate").value;
+    var pickupTime = document.getElementById("pickupTime").value;
+    var dropoffTime = document.getElementById("dropoffTime").value;
+    var driverAgeConfirmedDesktop = document.getElementById("driverAgeConfirmation").checked;
 
-      var driverAgeMessageDesk = driverAgeConfirmedDesktop ? "Yes, the driver is between 20-70 years." : "No confirmation about driver age.";
+    // Format driver age confirmation message
+    var driverAgeMessageDesk = driverAgeConfirmedDesktop ? "Yes, the driver is between 20-70 years." : "No confirmation about driver age.";
 
-      // Format message for WhatsApp
-      var message = `Hello, I would like to book a cab.\n\n` +
-      `Customer Name: ${name}\n`
-      `Customer Number: ${number}\n`
-        `Pick-up Location: ${pickupLocation}\n` +
-        `Drop-off Location: ${dropoffLocation}\n` +
-        `Pick-up Date: ${pickupDate} at ${pickupTime}\n` +
-        `Drop-off Date: ${dropoffDate} at ${dropoffTime}\n` +
-        `Driver Age Confirmation: ${driverAgeMessageDesk}`;
+    // Format message for WhatsApp
+    var message = `Hello, I would like to book a cab.\n\n` +
+      `Customer Name: ${name}\n` +
+      `Customer Number: ${number}\n` +
+      `Pick-up Location: ${pickupLocation}\n` +
+      `Drop-off Location: ${dropoffLocation}\n` +
+      `Pick-up Date: ${pickupDate} at ${pickupTime}\n` +
+      `Drop-off Date: ${dropoffDate} at ${dropoffTime}\n` +
+      `Driver Age Confirmation: ${driverAgeMessageDesk}`;
 
-      // WhatsApp API URL (replace PHONE_NUMBER with the business number)
-      var whatsappURL = `https://wa.me/+918341822404?text=${encodeURIComponent(message)}`;
+    // WhatsApp API URL (replace PHONE_NUMBER with the business number)
+    var whatsappURL = `https://wa.me/+918341822404?text=${encodeURIComponent(message)}`;
 
-      // Redirect to WhatsApp with the pre-filled message
-      window.open(whatsappURL, '_blank');
-    }
-  </script>
+    // Redirect to WhatsApp with the pre-filled message
+    window.open(whatsappURL, '_blank');
+  }
+</script>
+
  
  <script>
   function sendWhatsAppMobile() {
