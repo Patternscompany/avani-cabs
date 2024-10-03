@@ -206,25 +206,25 @@
                           </div>
 
                           <div class="row">
-                            <div class="col-md-12">
+                            <div class="col-md-6">
                               <div class="x_slider_form_input_wrapper float_left">
                                 <h3>Your Name</h3>
-                                <input type="text" id="name" placeholder="Enter your name here." />
+                                <input type="text" id="name" placeholder="Enter your name." />
                               </div>
                             </div>
-                            <div class="col-md-12">
+                            <div class="col-md-6">
                               <div class="x_slider_form_input_wrapper float_left">
                                 <h3>Phone Number</h3>
-                                <input type="text" id="number" placeholder="Enter your number here." />
+                                <input type="text" id="number" placeholder="Enter your number." />
                               </div>
                             </div>
-                            <div class="col-md-12">
+                            <div class="col-md-6">
                               <div class="x_slider_form_input_wrapper float_left">
                                 <h3>Pick-up Location</h3>
                                 <input type="text" id="pickupLocation" placeholder="City, Airport, Station, etc." />
                               </div>
                             </div>
-                            <div class="col-md-12">
+                            <div class="col-md-6">
                               <div class="x_slider_form_input_wrapper float_left">
                                 <h3>Drop-off Location</h3>
                                 <input type="text" id="dropoffLocation" placeholder="City, Airport, Station, etc." />
@@ -1575,14 +1575,36 @@
     // Format driver age confirmation message
     var driverAgeMessageDesk = driverAgeConfirmedDesktop ? "Yes, the driver is between 20-70 years." : "No confirmation about driver age.";
 
+    // Function to convert 24-hour time to 12-hour format with AM/PM
+    function convertTimeTo12HourFormat(time) {
+      var [hour, minute] = time.split(':');
+      var period = 'AM';
+
+      hour = parseInt(hour);
+      if (hour >= 12) {
+        period = 'PM';
+        if (hour > 12) {
+          hour = hour - 12;
+        }
+      } else if (hour === 0) {
+        hour = 12; // Midnight case
+      }
+
+      return `${hour}:${minute} ${period}`;
+    }
+
+    // Convert times to 12-hour format
+    var formattedPickupTime = convertTimeTo12HourFormat(pickupTime);
+    var formattedDropoffTime = convertTimeTo12HourFormat(dropoffTime);
+
     // Format message for WhatsApp
     var message = `Hello, I would like to book a cab.\n\n` +
       `Customer Name: ${name}\n` +
       `Customer Number: ${number}\n` +
       `Pick-up Location: ${pickupLocation}\n` +
       `Drop-off Location: ${dropoffLocation}\n` +
-      `Pick-up Date: ${pickupDate} at ${pickupTime}\n` +
-      `Drop-off Date: ${dropoffDate} at ${dropoffTime}\n` +
+      `Pick-up Date: ${pickupDate} at ${formattedPickupTime}\n` +
+      `Drop-off Date: ${dropoffDate} at ${formattedDropoffTime}\n` +
       `Driver Age Confirmation: ${driverAgeMessageDesk}`;
 
     // WhatsApp API URL (replace PHONE_NUMBER with the business number)
@@ -1593,8 +1615,9 @@
   }
 </script>
 
+
  
- <script>
+<script>
   function sendWhatsAppMobile() {
     // Get form field values
     var nameMobile = document.getElementById("nameMobile").value;
@@ -1607,16 +1630,39 @@
     var dropoffTimeMobile = document.getElementById("dropoffTimeMobile").value;
     var driverAgeConfirmedMobile = document.getElementById("driverAgeConfirmationMobile").checked;
 
-    // Format message for WhatsApp
+    // Format driver age confirmation message
     var driverAgeMessage = driverAgeConfirmedMobile ? "Yes, the driver is between 20-70 years." : "No confirmation about driver age.";
 
+    // Function to convert 24-hour time to 12-hour format with AM/PM
+    function convertTimeTo12HourFormat(time) {
+      var [hour, minute] = time.split(':');
+      var period = 'AM';
+
+      hour = parseInt(hour);
+      if (hour >= 12) {
+        period = 'PM';
+        if (hour > 12) {
+          hour = hour - 12;
+        }
+      } else if (hour === 0) {
+        hour = 12; // Midnight case
+      }
+
+      return `${hour}:${minute} ${period}`;
+    }
+
+    // Convert times to 12-hour format
+    var formattedPickupTimeMobile = convertTimeTo12HourFormat(pickupTimeMobile);
+    var formattedDropoffTimeMobile = convertTimeTo12HourFormat(dropoffTimeMobile);
+
+    // Format message for WhatsApp
     var messageMobile = `Hello, I would like to book a cab.\n\n` +
       `Customer Name: ${nameMobile}\n` +
       `Customer Number: ${numberMobile}\n` +
       `Pick-up Location: ${pickupLocationMobile}\n` +
       `Drop-off Location: ${dropoffLocationMobile}\n` +
-      `Pick-up Date: ${pickupDateMobile} at ${pickupTimeMobile}\n` +
-      `Drop-off Date: ${dropoffDateMobile} at ${dropoffTimeMobile}\n` +
+      `Pick-up Date: ${pickupDateMobile} at ${formattedPickupTimeMobile}\n` +
+      `Drop-off Date: ${dropoffDateMobile} at ${formattedDropoffTimeMobile}\n` +
       `Driver Age Confirmation: ${driverAgeMessage}`;
 
     // WhatsApp API URL (replace PHONE_NUMBER with the business number)
@@ -1626,6 +1672,7 @@
     window.open(whatsappURLL, '_blank');
   }
 </script>
+
 
 
 
