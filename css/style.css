@@ -2783,7 +2783,7 @@ html .ui-button.ui-state-disabled:active {
   border: 1px solid rgba(255, 255, 255, 0.29);
   height: 100px;
   position: absolute;
-  left: -75px;
+  left: -40px;
   top: -15px;
 }
 .x_book_logo_heading_wrapper h3 {
@@ -7058,4 +7058,11 @@ li.active a {
 
 .x_footer_top_title_box_icon_cont h3 a:hover{
   color: #b9291a !important;
+}
+
+.avani-heading{
+  font-size: 1.8rem !important;
+  font-weight: 700;
+  align-self: flex-end;
+  padding-left: 0 !important;
 }
