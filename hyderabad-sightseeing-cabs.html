@@ -229,7 +229,7 @@
             </p>
           </div>
         </div>
-        <div class="col-12 pt-5">
+        <div class="col-12 pt-5 packages-table">
           <table>
             <thead>
               <tr>
@@ -241,12 +241,26 @@
             </thead>
             <tbody>
               <tr>
-                <td data-label="Package">Hyderabad Sightseeing Option 1</td>
-                <td data-label="Vehicle Options & Price">
-                  Sedan (Swift DZire Equivalent): ₹3500<br>
-                  Ertiga 6 Seater: ₹4000<br>
-                  7 Seater Innova: ₹4500<br>
-                  7 Seater Innova Crysta: ₹5000
+                <td data-label="Package" class="heading">Hyderabad Local Sightseeing Option 1</td>
+                <td data-label="Vehicle Options & Price" class="hours">
+                  <li>
+                    <h4>For 8 hours</h4>
+                    Sedan (Dzire & Etios): <strong>₹2,200</strong> <br><br>
+                    Ertiga 6 Seater: <strong>₹2600</strong> <br><br>
+                    7 Seater Innova: <strong>₹2900</strong> <br><br>
+                    7 Seater Innova Crysta: <strong> ₹3200</strong>
+                  </li> 
+            <div>
+          
+            </div>
+                 <li>
+                  <h4>For 12 hours</h4>
+                  Sedan (Dzire & Etios): <strong> ₹3300</strong><br><br>
+                  Ertiga 6 Seater: <strong> ₹4200</strong><br><br>
+                  7 Seater Innova: <strong> ₹4500</strong><br><br>
+                  7 Seater Innova Crysta: <strong>₹5000</strong> 
+                 </li>
+                
                 </td>
                 <td data-label="Places you will visit">
                   1. Charminar<br>
@@ -257,15 +271,15 @@
                   6. Birla Mandir<br>
                   7. Hussain Sagar Lake
                 </td>
-                <td data-label="Action"><a href="#">Book Now</a></td>
+                <td data-label="Action"><a href="book-now.html">Book Now</a></td>
               </tr>
               <tr>
-                <td data-label="Package">Hyderabad Sightseeing Option 2</td>
+                <td data-label="Package" class="heading">Hyderabad Local Sightseeing Option 2</td>
                 <td data-label="Vehicle Options & Price">
-                  Sedan (Swift DZire Equivalent): ₹3500<br>
-                  Ertiga 6 Seater: ₹4500<br>
-                  7 Seater Innova: ₹5000<br>
-                  7 Seater Innova Crysta: ₹5500
+                  Sedan (Dzire & Etios): <strong>₹3500</strong> <br><br>
+                  Ertiga 6 Seater: <strong>₹4500</strong> <br><br>
+                  7 Seater Innova: <strong>₹5000</strong> <br><br>
+                  7 Seater Innova Crysta: <strong>₹5500</strong> 
                 </td>
                 <td data-label="Places you will visit">
                   1. Ramoji Film City (Full Day)<br>
@@ -273,21 +287,21 @@
                   Or<br>
                   1. WonderLa
                 </td>
-                <td data-label="Action"><a href="#">Book Now</a></td>
+                <td data-label="Action"><a href="book-now.html">Book Now</a></td>
               </tr>
               <tr>
-                <td data-label="Package">Hyderabad Sightseeing Option 3</td>
+                <td data-label="Package" class="heading">Hyderabad Local Sightseeing Option 3</td>
                 <td data-label="Vehicle Options & Price">
-                  Sedan (Swift DZire Equivalent): ₹4500<br>
-                  Ertiga 6 Seater: ₹5000<br>
-                  7 Seater Innova: ₹5500<br>
-                  7 Seater Innova Crysta: ₹6500
+                  Sedan (Dzire & Etios): <strong>₹4500</strong> <br><br>
+                  Ertiga 6 Seater: <strong>₹5000</strong> <br><br>
+                  7 Seater Innova: <strong>₹5500</strong> <br><br>
+                  7 Seater Innova Crysta: <strong>₹6500</strong> 
                 </td>
                 <td data-label="Places you will visit">
                   1. Yadagirigutta<br>
-                  2. Surendrapuri
+                  2. Swarnagiri
                 </td>
-                <td data-label="Action"><a href="#">Book Now</a></td>
+                <td data-label="Action"><a href="book-now.html">Book Now</a></td>
               </tr>
             </tbody>
           </table>
@@ -302,57 +316,79 @@
   </div>
 
   <style>
-    table {
+    .packages-table table {
       width: 100%;
       border-collapse: collapse;
       margin-bottom: 20px;
     }
-
-    th,
-    td {
+.packages-table td.heading{
+  color: blue !important;
+}
+    .packages-table th,
+    .packages-table td {
       padding: 12px;
       text-align: left;
       border: 1px solid #ddd;
+      font-weight: 600;
     }
 
-    th {
+    .packages-table th {
       background-color: #0074cc;
       color: white;
     }
 
-    td a {
+    .packages-table td a {
       color: #0074cc;
       text-decoration: none;
     }
 
-    tr:hover {
+    .packages-table tr:hover {
       background-color: #f1f1f1;
     }
+.packages-table td.hours{
+  display: flex;
+  gap: 0.2rem;
+  list-style-type: none;
+}
+.packages-table td.hours div{
+ 
+  background-color: black;
+  width: 0.2px;
+height: 200px;
+border: 0.2px solid black;
+}
+.packages-table td.hours h4{
+  font-weight: 600;
+  margin-block: 0.4rem;
 
+}
+.packages-table td strong{
+    color: red !important;
+}
     /* Responsive table - for smaller screens */
     @media screen and (max-width: 768px) {
 
-      table,
-      thead,
-      tbody,
-      th,
-      td,
-      tr {
+      .packages-table table,
+      .packages-table thead,
+      .packages-table tbody,
+      .packages-table th,
+      .packages-table td,
+      .packages-table tr {
         display: block;
       }
 
-      th {
+      .packages-table th {
         position: absolute;
         top: -9999px;
         left: -9999px;
       }
 
-      tr {
+      .packages-table tr {
         border: 1px solid #ddd;
         margin-bottom: 20px;
       }
 
-      td {
+      .packages-table td {
         border: none;
         border-bottom: 1px solid #ddd;
         position: relative;
@@ -360,7 +396,7 @@
         text-align: right;
       }
 
-      td:before {
+      .packages-table td:before {
         position: absolute;
         top: 12px;
         left: 12px;

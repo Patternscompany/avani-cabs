@@ -837,13 +837,13 @@
             </thead>
             <tbody>
               <tr>
-                <td data-label="Package">Hyderabad Local Sightseeing Option 1</td>
+                <td data-label="Package" class="heading">Hyderabad Local Sightseeing Option 1</td>
                 <td data-label="Vehicle Options & Price" class="hours">
                   <li>
                     <h4>For 8 hours</h4>
-                    Sedan (Dzire & Etios): <strong>₹2,200</strong> <br>
-                    Ertiga 6 Seater: <strong>₹2600</strong> <br>
-                    7 Seater Innova: <strong>₹2900</strong> <br>
+                    Sedan (Dzire & Etios): <strong>₹2,200</strong> <br><br>
+                    Ertiga 6 Seater: <strong>₹2600</strong> <br><br>
+                    7 Seater Innova: <strong>₹2900</strong> <br><br>
                     7 Seater Innova Crysta: <strong> ₹3200</strong>
                   </li> 
             <div>
@@ -851,9 +851,9 @@
             </div>
                  <li>
                   <h4>For 12 hours</h4>
-                  Sedan (Dzire & Etios): <strong> ₹3300</strong><br>
-                  Ertiga 6 Seater: <strong> ₹4200</strong><br>
-                  7 Seater Innova: <strong> ₹4500</strong><br>
+                  Sedan (Dzire & Etios): <strong> ₹3300</strong><br><br>
+                  Ertiga 6 Seater: <strong> ₹4200</strong><br><br>
+                  7 Seater Innova: <strong> ₹4500</strong><br><br>
                   7 Seater Innova Crysta: <strong>₹5000</strong> 
                  </li>
                 
@@ -870,11 +870,11 @@
                 <td data-label="Action"><a href="book-now.html">Book Now</a></td>
               </tr>
               <tr>
-                <td data-label="Package">Hyderabad Local Sightseeing Option 2</td>
+                <td data-label="Package" class="heading">Hyderabad Local Sightseeing Option 2</td>
                 <td data-label="Vehicle Options & Price">
-                  Sedan (Dzire & Etios): <strong>₹3500</strong> <br>
-                  Ertiga 6 Seater: <strong>₹4500</strong> <br>
-                  7 Seater Innova: <strong>₹5000</strong> <br>
+                  Sedan (Dzire & Etios): <strong>₹3500</strong> <br><br>
+                  Ertiga 6 Seater: <strong>₹4500</strong> <br><br>
+                  7 Seater Innova: <strong>₹5000</strong> <br><br>
                   7 Seater Innova Crysta: <strong>₹5500</strong> 
                 </td>
                 <td data-label="Places you will visit">
@@ -886,11 +886,11 @@
                 <td data-label="Action"><a href="book-now.html">Book Now</a></td>
               </tr>
               <tr>
-                <td data-label="Package">Hyderabad Local Sightseeing Option 3</td>
+                <td data-label="Package" class="heading">Hyderabad Local Sightseeing Option 3</td>
                 <td data-label="Vehicle Options & Price">
-                  Sedan (Dzire & Etios): <strong>₹4500</strong> <br>
-                  Ertiga 6 Seater: <strong>₹5000</strong> <br>
-                  7 Seater Innova: <strong>₹5500</strong> <br>
+                  Sedan (Dzire & Etios): <strong>₹4500</strong> <br><br>
+                  Ertiga 6 Seater: <strong>₹5000</strong> <br><br>
+                  7 Seater Innova: <strong>₹5500</strong> <br><br>
                   7 Seater Innova Crysta: <strong>₹6500</strong> 
                 </td>
                 <td data-label="Places you will visit">
@@ -1008,7 +1008,9 @@
       border-collapse: collapse;
       margin-bottom: 20px;
     }
-
+.packages-table td.heading{
+  color: blue !important;
+}
     .packages-table th,
     .packages-table td {
       padding: 12px;
@@ -1044,6 +1046,7 @@ border: 0.2px solid black;
 }
 .packages-table td.hours h4{
   font-weight: 600;
+  margin-block: 0.4rem;
 
 }
 .packages-table td strong{
