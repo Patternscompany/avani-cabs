@@ -214,6 +214,18 @@
                             </div>
                             <div class="col-md-12">
                               <div class="x_slider_form_input_wrapper float_left">
+                                <h3>Your Name</h3>
+                                <input type="text" id="name" placeholder="Enter your name here." />
+                              </div>
+                            </div>
+                            <div class="col-md-12">
+                              <div class="x_slider_form_input_wrapper float_left">
+                                <h3>Phone  Number</h3>
+                                <input type="text" id="number" placeholder="Enter your number here." />
+                              </div>
+                            </div>
+                            <div class="col-md-12">
+                              <div class="x_slider_form_input_wrapper float_left">
                                 <h3>Drop-off Location</h3>
                                 <input type="text" id="dropoffLocation" placeholder="City, Airport, Station, etc." />
                               </div>
@@ -296,6 +308,18 @@
           <h3>Let’s find your perfect car</h3>
         </div>
         <div class="row">
+          <div class="col-md-12">
+            <div class="x_slider_form_input_wrapper float_left">
+              <h3>Your Name</h3>
+              <input type="text" id="nameMobile" placeholder="Enter your name here." />
+            </div>
+          </div>
+          <div class="col-md-12">
+            <div class="x_slider_form_input_wrapper float_left">
+              <h3>Phone  Number</h3>
+              <input type="text" id="numberMobile" placeholder="Enter your number here." />
+            </div>
+          </div>
           <div class="col-md-12">
             <div class="x_slider_form_input_wrapper float_left">
               <h3>Pick-up Location</h3>
@@ -1538,25 +1562,30 @@
   <script>
     function sendWhatsApp() {
       // Get form field values
+      var name = document.getElementById("name").value;
+      var number = document.getElementById("number").value;
       var pickupLocation = document.getElementById("pickupLocation").value;
       var dropoffLocation = document.getElementById("dropoffLocation").value;
       var pickupDate = document.getElementById("pickupDate").value;
       var dropoffDate = document.getElementById("dropoffDate").value;
       var pickupTime = document.getElementById("pickupTime").value;
       var dropoffTime = document.getElementById("dropoffTime").value;
-      var driverAgeConfirmed = document.getElementById("driverAgeConfirmation").checked;
+      var driverAgeConfirmedDesktop = document.getElementById("driverAgeConfirmation").checked;
 
+      var driverAgeMessageDesk = driverAgeConfirmedDesktop ? "Yes, the driver is between 20-70 years." : "No confirmation about driver age.";
 
       // Format message for WhatsApp
       var message = `Hello, I would like to book a cab.\n\n` +
+      `Customer Name: ${name}\n`
+      `Customer Number: ${number}\n`
         `Pick-up Location: ${pickupLocation}\n` +
         `Drop-off Location: ${dropoffLocation}\n` +
         `Pick-up Date: ${pickupDate} at ${pickupTime}\n` +
         `Drop-off Date: ${dropoffDate} at ${dropoffTime}\n` +
-        `Driver Age Confirmation: Yes, the driver is between 20-70 years.`;
+        `Driver Age Confirmation: ${driverAgeMessageDesk}`;
 
       // WhatsApp API URL (replace PHONE_NUMBER with the business number)
-      var whatsappURL = `https://wa.me/8341822404?text=${encodeURIComponent(message)}`;
+      var whatsappURL = `https://wa.me/+918341822404?text=${encodeURIComponent(message)}`;
 
       // Redirect to WhatsApp with the pre-filled message
       window.open(whatsappURL, '_blank');
@@ -1566,6 +1595,8 @@
 <script>
   function sendWhatsAppMobile() {
     // Get form field values
+    var nameMobile = document.getElementById("nameMobile").value;
+    var numberMobile = document.getElementById("numberMobile").value;
     var pickupLocationMobile = document.getElementById("pickupLocationMobile").value;
     var dropoffLocationMobile = document.getElementById("dropoffLocationMobile").value;
     var pickupDateMobile = document.getElementById("pickupDateMobile").value;
@@ -1578,6 +1609,8 @@
     var driverAgeMessage = driverAgeConfirmedMobile ? "Yes, the driver is between 20-70 years." : "No confirmation about driver age.";
 
     var messageMobile = `Hello, I would like to book a cab.\n\n` +
+    `Customer Name:${nameMobile}`
+    `Customer Number:${numberMobile}`
       `Pick-up Location: ${pickupLocationMobile}\n` +
       `Drop-off Location: ${dropoffLocationMobile}\n` +
       `Pick-up Date: ${pickupDateMobile} at ${pickupTimeMobile}\n` +
@@ -1585,7 +1618,7 @@
       `Driver Age Confirmation: ${driverAgeMessage}`;
 
     // WhatsApp API URL (replace PHONE_NUMBER with the business number)
-    var whatsappURLL = `https://wa.me/8341822404?text=${encodeURIComponent(messageMobile)}`;
+    var whatsappURLL = `https://wa.me/+918341822404?text=${encodeURIComponent(messageMobile)}`;
 
     // Redirect to WhatsApp with the pre-filled message
     window.open(whatsappURLL, '_blank');
