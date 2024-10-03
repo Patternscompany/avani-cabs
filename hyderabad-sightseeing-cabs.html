@@ -251,24 +251,20 @@
               <tr>
                 <td data-label="Package" class="heading">Hyderabad Local Sightseeing Option 1</td>
                 <td data-label="Vehicle Options & Price" class="hours">
-                  <li>
-                    <h4>For 8 hours</h4>
-                    Sedan (Dzire & Etios): <strong>₹2,200</strong> <br><br>
-                    Ertiga 6 Seater: <strong>₹2600</strong> <br><br>
-                    7 Seater Innova: <strong>₹2900</strong> <br><br>
-                    7 Seater Innova Crysta: <strong> ₹3200</strong>
-                  </li> 
-            <div>
-          
-            </div>
-                 <li>
-                  <h4>For 12 hours</h4>
-                  Sedan (Dzire & Etios): <strong> ₹3300</strong><br><br>
-                  Ertiga 6 Seater: <strong> ₹4200</strong><br><br>
-                  7 Seater Innova: <strong> ₹4500</strong><br><br>
-                  7 Seater Innova Crysta: <strong>₹5000</strong> 
-                 </li>
-                
+                  <ul>
+                    <li><h4>For 8 hours</h4></li>
+                    <li>Sedan (Dzire & Etios): <strong>₹2,200</strong></li>
+                    <li>Ertiga 6 Seater: <strong>₹2,600</strong></li>
+                    <li>7 Seater Innova: <strong>₹2,900</strong></li>
+                    <li>7 Seater Innova Crysta: <strong>₹3,200</strong></li>
+                  </ul>
+                  <ul>
+                    <li><h4>For 12 hours</h4></li>
+                    <li>Sedan (Dzire & Etios): <strong>₹3,300</strong></li>
+                    <li>Ertiga 6 Seater: <strong>₹4,200</strong></li>
+                    <li>7 Seater Innova: <strong>₹4,500</strong></li>
+                    <li>7 Seater Innova Crysta: <strong>₹5,000</strong></li>
+                  </ul>
                 </td>
                 <td data-label="Places you will visit">
                   1. Charminar<br>
@@ -283,11 +279,13 @@
               </tr>
               <tr>
                 <td data-label="Package" class="heading">Hyderabad Local Sightseeing Option 2</td>
-                <td data-label="Vehicle Options & Price">
-                  Sedan (Dzire & Etios): <strong>₹3500</strong> <br><br>
-                  Ertiga 6 Seater: <strong>₹4500</strong> <br><br>
-                  7 Seater Innova: <strong>₹5000</strong> <br><br>
-                  7 Seater Innova Crysta: <strong>₹5500</strong> 
+                <td data-label="Vehicle Options & Price" class="hours">
+                  <ul>
+                    <li>Sedan (Dzire & Etios): <strong>₹3,500</strong></li>
+                    <li>Ertiga 6 Seater: <strong>₹4,500</strong></li>
+                    <li>7 Seater Innova: <strong>₹5,000</strong></li>
+                    <li>7 Seater Innova Crysta: <strong>₹5,500</strong></li>
+                  </ul>
                 </td>
                 <td data-label="Places you will visit">
                   1. Ramoji Film City (Full Day)<br>
@@ -299,11 +297,13 @@
               </tr>
               <tr>
                 <td data-label="Package" class="heading">Hyderabad Local Sightseeing Option 3</td>
-                <td data-label="Vehicle Options & Price">
-                  Sedan (Dzire & Etios): <strong>₹4500</strong> <br><br>
-                  Ertiga 6 Seater: <strong>₹5000</strong> <br><br>
-                  7 Seater Innova: <strong>₹5500</strong> <br><br>
-                  7 Seater Innova Crysta: <strong>₹6500</strong> 
+                <td data-label="Vehicle Options & Price" class="hours">
+                  <ul>
+                    <li>Sedan (Dzire & Etios): <strong>₹4,500</strong></li>
+                    <li>Ertiga 6 Seater: <strong>₹5,000</strong></li>
+                    <li>7 Seater Innova: <strong>₹5,500</strong></li>
+                    <li>7 Seater Innova Crysta: <strong>₹6,500</strong></li>
+                  </ul>
                 </td>
                 <td data-label="Places you will visit">
                   1. Yadagirigutta<br>
@@ -322,80 +322,79 @@
       </div>
     </div>
   </div>
-
   <style>
     .packages-table table {
       width: 100%;
       border-collapse: collapse;
       margin-bottom: 20px;
     }
-.packages-table td.heading{
-  color: blue !important;
-}
-    .packages-table th,
-    .packages-table td {
+  
+    .packages-table th, .packages-table td {
       padding: 12px;
       text-align: left;
       border: 1px solid #ddd;
       font-weight: 600;
     }
-
+  
     .packages-table th {
       background-color: #0074cc;
       color: white;
     }
-
+  
     .packages-table td a {
       color: #0074cc;
       text-decoration: none;
     }
-
+  
     .packages-table tr:hover {
       background-color: #f1f1f1;
     }
-.packages-table td.hours{
-  display: flex;
-  gap: 0.2rem;
-  list-style-type: none;
-}
-.packages-table td.hours div{
- 
-  background-color: black;
-  width: 0.2px;
-height: 200px;
-border: 0.2px solid black;
-}
-.packages-table td.hours h4{
-  font-weight: 600;
-  margin-block: 1rem;
-
-}
-.packages-table td strong{
-    color: red !important;
-}
-    /* Responsive table - for smaller screens */
+  
+    .packages-table td.heading {
+      color: blue;
+    }
+  
+    .packages-table td.hours ul {
+      padding-left: 0;
+      list-style-type: none;
+      margin-bottom: 1rem;
+     
+    }
+    .packages-table td.hours ul li{
+      display: flex;
+      padding: 0.2rem 0.3rem;
+      border-bottom: 1px solid grey;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+    .packages-table td.hours h4 {
+      font-weight: 600;
+      margin-bottom: 1rem;
+      color: blue;
+    }
+  
+    .packages-table td strong {
+      color: red;
+    }
+  
+    /* Responsive table for smaller screens */
     @media screen and (max-width: 768px) {
-
-      .packages-table table,
-      .packages-table thead,
-      .packages-table tbody,
-      .packages-table th,
-      .packages-table td,
-      .packages-table tr {
+      .packages-table table, .packages-table thead, .packages-table tbody,
+      .packages-table th, .packages-table td, .packages-table tr {
         display: block;
       }
-
+  
       .packages-table th {
         position: absolute;
         top: -9999px;
         left: -9999px;
       }
-
+  
       .packages-table tr {
         border: 1px solid #ddd;
         margin-bottom: 20px;
       }
-
+  
       .packages-table td {
         border: none;
         border-bottom: 1px solid #ddd;
@@ -403,7 +402,7 @@ border: 0.2px solid black;
         padding-left: 50%;
         text-align: right;
       }
-
+  
       .packages-table td:before {
         position: absolute;
         top: 12px;
