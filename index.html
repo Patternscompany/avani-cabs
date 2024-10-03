@@ -208,12 +208,6 @@
                           <div class="row">
                             <div class="col-md-12">
                               <div class="x_slider_form_input_wrapper float_left">
-                                <h3>Pick-up Location</h3>
-                                <input type="text" id="pickupLocation" placeholder="City, Airport, Station, etc." />
-                              </div>
-                            </div>
-                            <div class="col-md-12">
-                              <div class="x_slider_form_input_wrapper float_left">
                                 <h3>Your Name</h3>
                                 <input type="text" id="name" placeholder="Enter your name here." />
                               </div>
@@ -224,6 +218,13 @@
                                 <input type="text" id="number" placeholder="Enter your number here." />
                               </div>
                             </div>
+                            <div class="col-md-12">
+                              <div class="x_slider_form_input_wrapper float_left">
+                                <h3>Pick-up Location</h3>
+                                <input type="text" id="pickupLocation" placeholder="City, Airport, Station, etc." />
+                              </div>
+                            </div>
+                           
                             <div class="col-md-12">
                               <div class="x_slider_form_input_wrapper float_left">
                                 <h3>Drop-off Location</h3>
@@ -316,7 +317,7 @@
           </div>
           <div class="col-md-12">
             <div class="x_slider_form_input_wrapper float_left">
-              <h3>Phone  Number</h3>
+              <h3>Phone Number</h3>
               <input type="text" id="numberMobile" placeholder="Enter your number here." />
             </div>
           </div>
@@ -350,7 +351,6 @@
             </div>
           </div>
           
-          <!-- Time Selection -->
           <div class="col-md-6">
             <div class="x_slider_form_input_wrapper float_left">
               <h3>Pick-up Time</h3>
@@ -376,13 +376,14 @@
               <div class="x_slider_checout_right">
                 <ul>
                   <li>
-                    <a href="#" onclick="sendWhatsAppMobile()">Submit <i class="fa fa-arrow-right"></i></a>
+                    <a href="#" onclick="sendWhatsAppMobile(); return false;">Submit <i class="fa fa-arrow-right"></i></a>
                   </li>
                 </ul>
               </div>
             </div>
           </div>
         </div>
+        
       </div>
     </div>
   </div>
@@ -1592,7 +1593,7 @@
     }
   </script>
  
-<script>
+ <script>
   function sendWhatsAppMobile() {
     // Get form field values
     var nameMobile = document.getElementById("nameMobile").value;
@@ -1609,8 +1610,8 @@
     var driverAgeMessage = driverAgeConfirmedMobile ? "Yes, the driver is between 20-70 years." : "No confirmation about driver age.";
 
     var messageMobile = `Hello, I would like to book a cab.\n\n` +
-    `Customer Name:${nameMobile}`
-    `Customer Number:${numberMobile}`
+      `Customer Name: ${nameMobile}\n` +
+      `Customer Number: ${numberMobile}\n` +
       `Pick-up Location: ${pickupLocationMobile}\n` +
       `Drop-off Location: ${dropoffLocationMobile}\n` +
       `Pick-up Date: ${pickupDateMobile} at ${pickupTimeMobile}\n` +
@@ -1624,6 +1625,7 @@
     window.open(whatsappURLL, '_blank');
   }
 </script>
+
 
 
   <!-- custom js-->
