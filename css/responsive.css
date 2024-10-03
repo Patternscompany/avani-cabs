@@ -20,7 +20,8 @@
 }
 @media (max-width: 1500px){
 	.x_why_left_main_wrapper{
-		left:-500px;
+		left:-70px;
+		top: 0;
 	}
 }
 @media (max-width: 1400px){
