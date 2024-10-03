@@ -7052,3 +7052,10 @@ li.active a {
   background-color: var(--primary);
   /* border-radius: 50%; */
 }
+.x_footer_top_title_box_icon_cont h3 a{
+  color: #fff !important;
+}
+
+.x_footer_top_title_box_icon_cont h3 a:hover{
+  color: #b9291a !important;
+}
