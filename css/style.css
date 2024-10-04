@@ -3353,6 +3353,7 @@ html .ui-button.ui-state-disabled:active {
 .x_footer_bottom_box_wrapper li {
   float: left;
   margin-right: 15px;
+  margin-top: 7px;
 }
 .x_footer_bottom_box_wrapper li a {
   float: left;
