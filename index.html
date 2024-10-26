@@ -177,11 +177,352 @@
     </div>
   </div>
   <!-- hs Navigation End -->
+
+  <!--3D Code Start-->
+  <div class="d-container">
+    <h1 id="heading">Avani Cabs</h1>
+
+    <!-- Form container -->
+    <div id="formContainer">
+      <form id="bookingForm">
+        <div class="container">
+          <div class="row">
+            <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+              <div class="x_slider_form_main_wrapper float_left" data-animation="animated fadeIn">
+                <div class="x_slider_form_heading_wrapper float_left">
+                  <h3>Let’s find your perfect car</h3>
+                </div>
+
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="x_slider_form_input_wrapper float_left">
+                      <h3>Your Name</h3>
+                      <input type="text" id="name" placeholder="Enter your name." />
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="x_slider_form_input_wrapper float_left">
+                      <h3>Phone Number</h3>
+                      <input type="text" id="number" placeholder="Enter your number." />
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="x_slider_form_input_wrapper float_left">
+                      <h3>Pick-up Location</h3>
+                      <input type="text" id="pickupLocation" placeholder="City, Airport, Station, etc." />
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="x_slider_form_input_wrapper float_left">
+                      <h3>Drop-off Location</h3>
+                      <input type="text" id="dropoffLocation" placeholder="City, Airport, Station, etc." />
+                    </div>
+                  </div>
+
+                  <div class="col-md-6">
+                    <div class="form-sec-header">
+                      <h3>Pick-up Date</h3>
+                      <label class="cal-icon">Pick-up Date
+                        <input type="text" id="pickupDate" placeholder="Tue 16 Jan 2018"
+                          class="form-control datepicker" />
+                      </label>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="form-sec-header">
+                      <h3>Drop-Off Date</h3>
+                      <label class="cal-icon">Drop-off Date
+                        <input type="text" id="dropoffDate" placeholder="Tue 16 Jan 2018"
+                          class="form-control datepicker" />
+                      </label>
+                    </div>
+                  </div>
+
+
+                  <div class="col-md-6">
+                    <div class="x_slider_form_input_wrapper float_left">
+                      <h3>Pick-up Time</h3>
+                      <input type="time" id="pickupTime" />
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="x_slider_form_input_wrapper float_left">
+                      <h3>Drop-off Time</h3>
+                      <input type="time" id="dropoffTime" />
+                    </div>
+                  </div>
+
+                  <div class="col-md-12">
+                    <div class="x_slider_checkbox float_left">
+                      <input type="checkbox" id="driverAgeConfirmation" name="cb" />
+                      <label for="driverAgeConfirmation">Driver age is between 20-70 &nbsp;<i
+                          class="fa fa-question-circle"></i></label>
+                    </div>
+                  </div>
+
+                  <div class="col-md-12">
+                    <div class="x_slider_checkbox_bottom float_left">
+                      <div class="x_slider_checout_right">
+                        <ul>
+                          <li>
+                            <a href="#" onclick="sendWhatsApp(); return false;">Submit <i
+                                class="fa fa-arrow-right"></i></a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
+    <!-- <input id="name" type="text" placeholder="Full Name" required>
+        <input id="email" type="email" placeholder="Email" required>
+        <input id="pickup" type="text" placeholder="Pickup Location" required>
+        <input id="destination" type="text" placeholder="Destination" required> -->
+    <!-- <button type="submit">Submit</button> -->
+    </form>
+  </div>
+
+  <!-- Button to open the form -->
+  <button id="openFormButton" onclick="toggleForm()">Book Now</button>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/three@0.143.0/build/three.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/three@0.143.0/examples/js/controls/OrbitControls.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/three@0.143.0/examples/js/loaders/GLTFLoader.js"></script>
+  <script>
+    document.getElementById('bookingForm').addEventListener('submit', function (e) {
+      e.preventDefault(); // Prevent form submission
+
+      // Collect form data
+      const name = document.getElementById('name').value;
+      const email = document.getElementById('email').value;
+      const pickup = document.getElementById('pickup').value;
+      const destination = document.getElementById('destination').value;
+
+      // Format the message
+      const message = `Hello!%0AI'm interested in booking a ride.%0A%0A*Details:*%0AName: ${name}%0AEmail: ${email}%0APickup Location: ${pickup}%0ADestination: ${destination}%0A`;
+
+      // Create WhatsApp URL (replace '1234567890' with the business's WhatsApp number)
+      const whatsappURL = `https://wa.me/7729052259?text=${message}`;
+
+      // Open WhatsApp in a new window
+      window.open(whatsappURL, '_blank');
+    });
+
+    let scene, camera, renderer, car, carSpeed = 0.02;
+    let wheelFL, wheelFR, wheelRL, wheelRR;
+    let carReachedCenter = false;
+    let aspectRatio = window.innerWidth / window.innerHeight;
+
+    let isHovering = false;
+    const raycaster = new THREE.Raycaster();
+    const mouse = new THREE.Vector2();
+
+    function init() {
+      scene = new THREE.Scene();
+      scene.background = new THREE.Color(0x87CEEB);
+
+      camera = new THREE.PerspectiveCamera(50, aspectRatio, 0.1, 1000);
+      camera.position.set(0, 2, 8);
+
+      renderer = new THREE.WebGLRenderer({ antialias: true });
+      renderer.setSize(window.innerWidth, window.innerHeight);
+      document.body.appendChild(renderer.domElement);
+
+      const light = new THREE.DirectionalLight(0xffffff, 1);
+      light.position.set(5, 5, 5);
+      scene.add(light);
+
+      const ambientLight = new THREE.AmbientLight(0xffffff, 0.4);
+      scene.add(ambientLight);
+
+      const gltfLoader = new THREE.GLTFLoader();
+      gltfLoader.load('/toyota_kijang_innova_zenix_2023_highpoly/scene.gltf', function (gltf) {
+        car = gltf.scene;
+        scene.add(car);
+
+        wheelFL = car.getObjectByName('WheelFL');
+        wheelFR = car.getObjectByName('WheelFR');
+        wheelRL = car.getObjectByName('WheelRL');
+        wheelRR = car.getObjectByName('WheelRR');
+
+        car.scale.set(1.5, 1.5, 1.5);
+        car.rotation.y = Math.PI / 2;
+        car.position.set(-5, 0.1, 0);
+
+        applyTextOnCar();
+      });
+
+      createResponsiveRoad();
+
+      window.addEventListener('resize', onWindowResize);
+      // window.addEventListener('mousemove', onMouseMove, false);
+      // window.addEventListener('mouseout', onMouseOut, false);
+      animate();
+    }
+
+    function toggleForm() {
+      const formContainer = document.getElementById("formContainer");
+      // Check the current display state
+      if (formContainer.style.display === "none" || formContainer.style.display === "") {
+        formContainer.style.display = "block";
+      } else {
+        formContainer.style.display = "none";
+      }
+    }
+
+    function animate() {
+      requestAnimationFrame(animate);
+
+      if (car && !carReachedCenter) {
+        // Define the center position of the screen (x = 0)
+        const centerPosition = 0;
+
+        // Only move the car if it is not being hovered over and hasn't reached the center
+        if (!isHovering) {
+          // Move the car towards the center
+          if (car.position.x < centerPosition) {
+            car.position.x += carSpeed;  // Move the car towards the center
+
+            // Rotate the wheels while the car is moving
+            if (wheelFL && wheelFR && wheelRL && wheelRR) {
+              const rotationSpeed = carSpeed * 2;
+              wheelFL.rotation.z -= rotationSpeed;
+              wheelFR.rotation.z -= rotationSpeed;
+              wheelRL.rotation.z -= rotationSpeed;
+              wheelRR.rotation.z -= rotationSpeed;
+            }
+
+          } else {
+            // Car has reached the center, stop its movement and display text
+            car.position.x = centerPosition;  // Ensure it's perfectly centered
+            carReachedCenter = true;  // Stop the car from moving again
+            showTextAnimation();
+            // Rotate the car to face the user
+            car.rotation.y = Math.PI / 30;  // This makes the car face the user (180 degrees)
+
+            document.getElementById('heading').classList.add('show');  // Show "Avani Cabs"
+          }
+        }
+      }
+
+      renderer.render(scene, camera);
+    }
+
+    function applyTextOnCar() {
+      const canvas = document.createElement('canvas');
+      const ctx = canvas.getContext('2d');
+      canvas.width = 512;
+      canvas.height = 256;
+
+      // Fill background
+      ctx.fillStyle = 'orange';
+      ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+      // Add "Avani Cabs" text
+      ctx.fillStyle = 'black';
+      ctx.font = 'bold 50px Arial';
+      ctx.fillText('Avani Cabs', 50, 130);
+
+      // Create texture from canvas
+      const texture = new THREE.CanvasTexture(canvas);
+      const material = new THREE.MeshBasicMaterial({ map: texture });
+
+      // Create a simple plane to attach to the car for the text
+      const textGeometry = new THREE.PlaneGeometry(1.5, 0.5); // Adjust size as needed
+      const textMesh = new THREE.Mesh(textGeometry, material);
+
+      // Position the text on the side of the car
+      textMesh.position.set(-0.5, 1.1, 0); // Adjust position based on the car model
+      textMesh.rotation.y = Math.PI / 2;
+
+      // Add the text to the car
+      car.add(textMesh);
+    }
+
+    function createResponsiveRoad() {
+      const roadWidth = window.innerWidth * 2; // Stretch the road across the entire screen
+      const roadGeometry = new THREE.PlaneGeometry(roadWidth, 10); // Road width and length
+
+      // Create a custom material to simulate a road texture using procedural shading
+      const roadMaterial = new THREE.MeshStandardMaterial({
+        color: 0x2d2d2d, // Dark gray color to simulate asphalt
+        roughness: 0.8,  // Roughness for a more natural look
+        metalness: 0.1,  // Slight reflectivity for a subtle shine
+      });
+
+      const road = new THREE.Mesh(roadGeometry, roadMaterial);
+      road.rotation.x = -Math.PI / 2; // Lay the road flat
+      road.position.y = 0; // Ground level
+      road.position.z = 0; // Center on Z-axis
+      scene.add(road);
+
+      createRoadLines();
+    }
+
+    function createRoadLines() {
+      const lineCount = 20; // Number of dashes on the road
+      const lineWidth = 1; // Thin lines
+      const lineLength = 0.1; // Length of each dash
+      const lineSpacing = 1;  // Space between dashes
+
+      for (let i = 0; i < lineCount; i++) {
+        const lineGeometry = new THREE.PlaneGeometry(lineWidth, lineLength);
+        const lineMaterial = new THREE.MeshStandardMaterial({ color: 'white', roughness: 0.5 });
+        const line = new THREE.Mesh(lineGeometry, lineMaterial);
+        line.rotation.x = -Math.PI / 2;
+        line.position.set(i * (lineLength + lineSpacing) - (lineCount * lineLength) / 2, 0.01, 0); // Place lines along the road
+        scene.add(line);
+      }
+    }
+
+    function onWindowResize() {
+      aspectRatio = window.innerWidth / window.innerHeight;
+
+      camera.aspect = aspectRatio;
+      camera.updateProjectionMatrix();
+
+      renderer.setSize(window.innerWidth, window.innerHeight);
+
+      // Recreate the road to match the new window size
+      scene.clear();  // Clears the scene to prevent duplicating objects
+      createResponsiveRoad();  // Rebuild the road with new width
+    }
+
+    function showTextAnimation() {
+      const heading = document.getElementById('heading');
+
+      // Set initial state
+      gsap.set(heading, { opacity: 0, scale: 0.5 });
+
+      // Create animation: fade in + scale up + bounce effect
+      gsap.to(heading, {
+        duration: 0.5,
+        opacity: 1,
+        scale: 1,
+        ease: "bounce.out", // Bounce effect at the end
+      });
+    }
+
+    // Remaining existing code like animate(), applyTextOnCar(), createResponsiveRoad(), etc.
+    // ...
+    init();
+  </script>
+
+
+  <!--3D Code End-->
+
   <style>
 
   </style>
   <!-- hs Slider Start -->
-  <div class="slider-area float_left">
+  <!-- <div class="slider-area float_left">
     <div id="carousel-example-generic" class="carousel slide" data-interval="false" data-ride="carousel">
       <div class="carousel-inner" role="listbox">
         <div class="carousel-item active">
@@ -189,7 +530,7 @@
             <source src="./videos/hero-section-video2.mp4" type="video/mp4" />
 
           </video>
-          <!-- <img src="images/hero-mobile.png" alt="Avani Cabs" class="w-100 d-block d-lg-none d-xl-none"> -->
+          <img src="images/hero-mobile.png" alt="Avani Cabs" class="w-100 d-block d-lg-none d-xl-none">
           <div class="carousel-captions caption-1">
             <div class="container">
               <div class="row">
@@ -251,7 +592,7 @@
                               </div>
                             </div>
 
-                            <!-- Time Selection -->
+                            
                             <div class="col-md-6">
                               <div class="x_slider_form_input_wrapper float_left">
                                 <h3>Pick-up Time</h3>
@@ -301,15 +642,10 @@
 
 
     </div>
-  </div>
+  </div> -->
   <!-- hs Slider End -->
-  <style>
-    .desktop{
 
-    }
-  </style>
-
-  <div
+  <!-- <div
     class="x_responsive_form_wrapper x_responsive_form_wrapper2 float_left d-block d-sm-block d-md-block d-lg-none d-xl-none">
     <div class="container">
       <div class="x_slider_form_main_wrapper float_left">
@@ -398,7 +734,7 @@
 
       </div>
     </div>
-  </div>
+  </div> -->
 
 
   <style>
@@ -818,7 +1154,8 @@
 
                 <ul>
                   <li> <img src="images/cars/dzire.png" alt=""> Sedan(Dzire & Etios) <span>-</span>
-                    <strong>₹3500</strong></li>
+                    <strong>₹3500</strong>
+                  </li>
                   <li><img src="images/cars/ertiga1.png" alt=""> Ertiga<span>-</span> <strong>₹4200</strong></li>
                   <li><img src="images/cars/innova.png" alt=""> Innova <span>-</span> <strong>₹4500</strong></li>
                   <li><img src="images/cars/innova-crysta.png" alt=""> Crysta <span>-</span> <strong>₹5500</strong></li>
@@ -834,7 +1171,8 @@
 
                 <ul>
                   <li> <img src="images/cars/dzire.png" alt=""> Sedan(Dzire & Etios) <span>-</span>
-                    <strong>₹1300</strong></li>
+                    <strong>₹1300</strong>
+                  </li>
                   <li><img src="images/cars/ertiga1.png" alt=""> Ertiga<span>-</span> <strong>₹1800</strong></li>
                   <li><img src="images/cars/innova.png" alt=""> Innova <span>-</span> <strong>₹2300</strong></li>
                   <li><img src="images/cars/innova-crysta.png" alt=""> Crysta <span>-</span> <strong>₹2600</strong></li>
@@ -1762,10 +2100,6 @@
       window.open(whatsappURLL, '_blank');
     }
   </script>
-
-
-
-
 
   <!-- custom js-->
 </body>

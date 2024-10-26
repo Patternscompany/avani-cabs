@@ -1411,14 +1411,14 @@ li.active .dropdown-wrapper:hover > .menu-button:after {
   border-radius: 10px;
 }
 .x_slider_form_heading_wrapper h3 {
-  font-size: 18px;
+  font-size: 15px;
   font-weight: 600;
   color: #ffffff;
   text-transform: uppercase;
   line-height: 50px;
 }
 .x_slider_form_input_wrapper h3 {
-  font-size: 14px;
+  font-size: 12px;
   font-weight: 800;
   color: #111111;
   text-transform: uppercase;
@@ -7067,4 +7067,76 @@ li.active a {
   font-weight: 700;
   align-self: flex-end;
   padding-left: 0 !important;
+}
+
+/* 3D code */
+/* .d-container{
+  position: relative;
+} */
+canvas {
+  display: block;
+}
+
+.d-container h1 {
+  position: absolute;
+  top: 52%;
+  left: 54%;
+  transform: translateX(-50%) scale(0.5);
+  color: red;
+  font-size: 60px;
+  z-index: 1000;
+  display: none;
+  opacity: 0;
+  transition: opacity 1s ease-in, transform 1s ease-in;
+}
+
+@media (max-width:992px){
+  .d-container h1 {
+    font-size: 23px;
+    left: 62%;
+  }
+}
+
+h1.show {
+  display: block;
+  opacity: 1;
+  transform: translateX(-50%) scale(1);
+}
+
+/* Form styling */
+#formContainer {
+  position: absolute;
+  top: 10%;
+  right: 1%;
+  width: 35%;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  z-index: 100;
+  display: none;
+  max-height: 100%;
+}
+
+#formContainer form input,
+#formContainer form button {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+
+/* Form open button */
+#openFormButton {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  padding: 10px 20px;
+  font-size: 16px;
+  background: red;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  z-index: 2000;
 }
