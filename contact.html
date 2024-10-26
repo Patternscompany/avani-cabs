@@ -558,24 +558,58 @@ background-color: red !important;
   <script src="js/jquery.magnific-popup.js"></script>
   <script src="js/xpedia.js"></script>
   <!-- custom js-->
-  <script type="text/javascript" async="" src="js/index.js">    document.getElementById('sendMessageBtn').addEventListener('click', function () {
-      var firstName = document.getElementById('firstName').value;
-      var lastName = document.getElementById('lastName').value;
-      var email = document.getElementById('email').value;
-      var phone = document.getElementById('phone').value;
-      var comment = document.getElementById('comment').value;
-
+  <script type="text/javascript" >
+    document.getElementById('sendMessageBtn').addEventListener('click', function () {
+      var firstName = document.getElementById('firstName').value.trim();
+      var lastName = document.getElementById('lastName').value.trim();
+      var email = document.getElementById('email').value.trim();
+      var phone = document.getElementById('phone').value.trim();
+      var comment = document.getElementById('comment').value.trim();
+  
+      // Validation
+      if (!firstName) {
+        alert("Please enter your first name.");
+        return;
+      }
+  
+      if (!lastName) {
+        alert("Please enter your last name.");
+        return;
+      }
+  
+      if (!validateEmail(email)) {
+        alert("Please enter a valid email address.");
+        return;
+      }
+  
+      if (!/^\d{10}$/.test(phone)) {
+        alert("Please enter a valid 10-digit phone number.");
+        return;
+      }
+  
+      if (!comment) {
+        alert("Please enter your comment.");
+        return;
+      }
+  
       // Create the WhatsApp message
       var message = `Hello, I am ${firstName} ${lastName}.%0AEmail: ${email}%0APhone: ${phone}%0AComment: ${comment}`;
-
+  
       // WhatsApp phone number (with country code)
       var phoneNumber = '+918341822404';
-
+  
       // Open WhatsApp with the pre-filled message
       var whatsappUrl = `https://wa.me/${phoneNumber}?text=${message}`;
       window.open(whatsappUrl, '_blank');
     });
+  
+    // Function to validate email format
+    function validateEmail(email) {
+      var re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      return re.test(email);
+    }
   </script>
+  
 
 </body>
 
