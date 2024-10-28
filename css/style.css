@@ -7084,7 +7084,7 @@ canvas {
   transform: translateX(-50%) scale(0.5);
   color: red;
   font-size: 60px;
-  z-index: 1000;
+  /* z-index: 1000; */
   display: none;
   opacity: 0;
   transition: opacity 1s ease-in, transform 1s ease-in;
@@ -7117,6 +7117,11 @@ h1.show {
   display: none;
   max-height: 100%;
   overflow-y: scroll;
+}
+@media (max-width:992px){
+  #formContainer{
+    width: 90%;
+  }
 }
 
 #formContainer form input,
